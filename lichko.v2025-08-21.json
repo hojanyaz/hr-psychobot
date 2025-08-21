@@ -1,0 +1,501 @@
+{
+  "key": "lichko",
+  "version": "2025.08.21",
+  "status": "active",
+  "title": {
+    "ru": "Тест акцентуаций характера — Личко (адаптация)",
+    "uz": "Xarakter aktsentuatsiyasi testi — Lichko (moslashtirilgan)"
+  },
+  "scale": {
+    "ru": "1 = не согласен … 5 = полностью согласен",
+    "uz": "1 = rozi emasman … 5 = to‘liq rozi bo‘laman"
+  },
+  "items": [
+    {
+      "k": "гипертим",
+      "t": {
+        "ru": "Мне нравится быть в центре событий.",
+        "uz": "Men voqealarning markazida bo‘lishni yaxshi ko‘raman."
+      },
+      "rev": false
+    },
+    {
+      "k": "гипертим",
+      "t": {
+        "ru": "Я легко завожу новые знакомства.",
+        "uz": "Men yangi tanishlar orttirishni oson topaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "гипертим",
+      "t": {
+        "ru": "Мне сложно долго работать в тишине и одиночестве.",
+        "uz": "Tinchlik va yolg‘izlikda uzoq ishlash menga qiyin."
+      },
+      "rev": false
+    },
+    {
+      "k": "гипертим",
+      "t": {
+        "ru": "Я спокойно отношусь к однообразию.",
+        "uz": "Bir xillikka xotirjam munosabatdaman."
+      },
+      "rev": true
+    },
+    {
+      "k": "гипертим",
+      "t": {
+        "ru": "Я часто заражаю других своим оптимизмом.",
+        "uz": "Ko‘pincha boshqalarni optimizmim bilan ruhlantiraman."
+      },
+      "rev": false
+    },
+    {
+      "k": "циклоид",
+      "t": {
+        "ru": "У меня бывают периоды подъёма и спада настроения.",
+        "uz": "Menda kayfiyat ko‘tarilishi va tushishi davrlari bo‘ladi."
+      },
+      "rev": false
+    },
+    {
+      "k": "циклоид",
+      "t": {
+        "ru": "В некоторые периоды мне легче общаться, в другие — хочется уединиться.",
+        "uz": "Ba’zi davrlar muloqot oson, boshqalarida esa yolg‘izlikni xohlayman."
+      },
+      "rev": false
+    },
+    {
+      "k": "циклоид",
+      "t": {
+        "ru": "Моё рабочее темпоощущение изменчиво.",
+        "uz": "Ish sur’atim o‘zgaruvchan."
+      },
+      "rev": false
+    },
+    {
+      "k": "циклоид",
+      "t": {
+        "ru": "Моё настроение стабильно и ровно.",
+        "uz": "Kayfiyatim barqaror va tekis."
+      },
+      "rev": true
+    },
+    {
+      "k": "циклоид",
+      "t": {
+        "ru": "Иногда я откладываю дела на спад настроения.",
+        "uz": "Ba’zan ishlarni kayfiyat tushganda kechiktiraman."
+      },
+      "rev": false
+    },
+    {
+      "k": "лабильный",
+      "t": {
+        "ru": "Моё настроение легко меняется из-за мелочей.",
+        "uz": "Kayfiyatim arzimas narsalardan ham oson o‘zgaradi."
+      },
+      "rev": false
+    },
+    {
+      "k": "лабильный",
+      "t": {
+        "ru": "Я чутко реагирую на внимание и поддержку.",
+        "uz": "E’tibor va qo‘llab-quvvatlashga sezgirman."
+      },
+      "rev": false
+    },
+    {
+      "k": "лабильный",
+      "t": {
+        "ru": "Похвала поднимает мой тонус, критика легко ранит.",
+        "uz": "Maqtov kayfiyatimni ko‘taradi, tanqid esa oson ranjitadi."
+      },
+      "rev": false
+    },
+    {
+      "k": "лабильный",
+      "t": {
+        "ru": "Эмоциональные колебания мне несвойственны.",
+        "uz": "Hissiy tebranishlar menga xos emas."
+      },
+      "rev": true
+    },
+    {
+      "k": "лабильный",
+      "t": {
+        "ru": "Я быстро успокаиваюсь после переживаний.",
+        "uz": "Tashvishdan so‘ng tez tinchlanaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "астеноневротический",
+      "t": {
+        "ru": "Я быстро утомляюсь при длительной нагрузке.",
+        "uz": "Uzoq yuklamada tez charchab qolaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "астеноневротический",
+      "t": {
+        "ru": "Шум и суета меня выматывают.",
+        "uz": "Shovqin va shoshilish meni holdan toydiradi."
+      },
+      "rev": false
+    },
+    {
+      "k": "астеноневротический",
+      "t": {
+        "ru": "Мне свойственна повышенная чувствительность к стрессу.",
+        "uz": "Stressga sezgirligim yuqori."
+      },
+      "rev": false
+    },
+    {
+      "k": "астеноневротический",
+      "t": {
+        "ru": "Я легко переношу перегрузки и недосып.",
+        "uz": "Og‘ir yuklama va uyqusizlikni oson ko‘taraman."
+      },
+      "rev": true
+    },
+    {
+      "k": "астеноневротический",
+      "t": {
+        "ru": "Я часто переживаю за своё самочувствие.",
+        "uz": "Ko‘pincha o‘zimni qanday his qilishimdan xavotirdaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "сенситивный",
+      "t": {
+        "ru": "Мне важно признание близкого круга, а не широкой публики.",
+        "uz": "Menga keng ommadan ko‘ra yaqinlar e’tirofi muhim."
+      },
+      "rev": false
+    },
+    {
+      "k": "сенситивный",
+      "t": {
+        "ru": "Я болезненно отношусь к насмешкам и грубости.",
+        "uz": "Masxara va qo‘pollikka og‘irlik bilan munosabatdaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "сенситивный",
+      "t": {
+        "ru": "Я долго помню обиды, хотя могу не показывать этого.",
+        "uz": "Xafagarchiliklarni uzoq eslab qolaman, garchi buni bildirmasam ham."
+      },
+      "rev": false
+    },
+    {
+      "k": "сенситивный",
+      "t": {
+        "ru": "Мне легко безразлично мнение близких.",
+        "uz": "Yaqinlar fikriga befarqman."
+      },
+      "rev": true
+    },
+    {
+      "k": "сенситивный",
+      "t": {
+        "ru": "Я избегаю шума и агрессивной среды.",
+        "uz": "Shovqin va tajovuzkor muhitdan qochaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "психастенический",
+      "t": {
+        "ru": "Я склонен(на) к сомнениям и перепроверкам.",
+        "uz": "Shubhalanib, qayta tekshirishga moyilman."
+      },
+      "rev": false
+    },
+    {
+      "k": "психастенический",
+      "t": {
+        "ru": "Перед важным делом я долго планирую детали.",
+        "uz": "Muhim ish oldidan detallarni uzoq rejalashtiraman."
+      },
+      "rev": false
+    },
+    {
+      "k": "психастенический",
+      "t": {
+        "ru": "Ответственность меня напрягает, но я не избегаю её.",
+        "uz": "Mas’uliyat meni siqadi, ammo undan qochmayman."
+      },
+      "rev": false
+    },
+    {
+      "k": "психастенический",
+      "t": {
+        "ru": "Я принимаю решения мгновенно и без сомнений.",
+        "uz": "Qarorlarni birdan va shubhasiz qabul qilaman."
+      },
+      "rev": true
+    },
+    {
+      "k": "психастенический",
+      "t": {
+        "ru": "Я часто прорабатываю запасные планы.",
+        "uz": "Ko‘pincha zaxira rejalarni ishlab chiqaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "шизоид",
+      "t": {
+        "ru": "Мне комфортно в одиночестве и в мире идей.",
+        "uz": "Yolg‘izlikda va g‘oyalar olamida o‘zimni qulay his qilaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "шизоид",
+      "t": {
+        "ru": "Я не нуждаюсь в постоянном общении.",
+        "uz": "Doimiy muloqotga muhtoj emasman."
+      },
+      "rev": false
+    },
+    {
+      "k": "шизоид",
+      "t": {
+        "ru": "Мне лучше выразить мысль письменно, чем устно.",
+        "uz": "Fikrni og‘zaki emas, yozma ifodalash menga qulayroq."
+      },
+      "rev": false
+    },
+    {
+      "k": "шизоид",
+      "t": {
+        "ru": "Мне легко даются small-talk и светские беседы.",
+        "uz": "Yengil suhbatlar oson kechadi."
+      },
+      "rev": true
+    },
+    {
+      "k": "шизоид",
+      "t": {
+        "ru": "Мне важнее идея, чем эмоциональный фон.",
+        "uz": "Hissiy fondan ko‘ra g‘oya muhimroq."
+      },
+      "rev": false
+    },
+    {
+      "k": "эпилептоид",
+      "t": {
+        "ru": "Я ценю порядок, дисциплину и иерархию.",
+        "uz": "Tartib, intizom va iyerarxiyani qadrlayman."
+      },
+      "rev": false
+    },
+    {
+      "k": "эпилептоид",
+      "t": {
+        "ru": "Нарушения правил меня раздражают.",
+        "uz": "Qoidabuzarliklar meni asabiylashtiradi."
+      },
+      "rev": false
+    },
+    {
+      "k": "эпилептоид",
+      "t": {
+        "ru": "Я требователен(льна) к соблюдению договорённостей.",
+        "uz": "Kelishuvlarga rioya qilishga talabchanman."
+      },
+      "rev": false
+    },
+    {
+      "k": "эпилептоид",
+      "t": {
+        "ru": "Мне легко менять планы на ходу.",
+        "uz": "Rejani oson o‘zgartiraman."
+      },
+      "rev": true
+    },
+    {
+      "k": "эпилептоид",
+      "t": {
+        "ru": "Я предпочитаю контролировать процесс до деталей.",
+        "uz": "Jarayonni tafsilotlarigacha nazorat qilaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "истероид",
+      "t": {
+        "ru": "Мне важно производить впечатление и нравиться людям.",
+        "uz": "Odamlarga yoqish va taassurot qoldirish muhim."
+      },
+      "rev": false
+    },
+    {
+      "k": "истероид",
+      "t": {
+        "ru": "Я люблю сцены, презентации, публичные роли.",
+        "uz": "Sahna va taqdimotlarni yoqtiraman."
+      },
+      "rev": false
+    },
+    {
+      "k": "истероид",
+      "t": {
+        "ru": "Мне скучно, если я в тени и незаметен(на).",
+        "uz": "Soyada qolib ko‘zga tashlanmasam zerikaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "истероид",
+      "t": {
+        "ru": "Мне безразлично чужое внимание.",
+        "uz": "Boshqalarning e’tiboriga befarqman."
+      },
+      "rev": true
+    },
+    {
+      "k": "истероид",
+      "t": {
+        "ru": "Я часто усиливаю эмоции, чтобы передать идею.",
+        "uz": "G‘oyani yetkazish uchun hissiyotlarni kuchaytiraman."
+      },
+      "rev": false
+    },
+    {
+      "k": "неустойчивый",
+      "t": {
+        "ru": "Мне трудно длительно удерживать внимание на одном деле.",
+        "uz": "Bir ishga uzoq diqqatni jamlash qiyin."
+      },
+      "rev": false
+    },
+    {
+      "k": "неустойчивый",
+      "t": {
+        "ru": "Я легко переключаюсь с задачи на задачу.",
+        "uz": "Vazifadan vazifaga oson o‘taman."
+      },
+      "rev": false
+    },
+    {
+      "k": "неустойчивый",
+      "t": {
+        "ru": "Мне сложно соблюдать режим и распорядок.",
+        "uz": "Rejimga rioya qilish qiyin."
+      },
+      "rev": false
+    },
+    {
+      "k": "неустойчивый",
+      "t": {
+        "ru": "Я легко формирую устойчивые привычки.",
+        "uz": "Barqaror odatlarni oson shakllantiraman."
+      },
+      "rev": true
+    },
+    {
+      "k": "неустойчивый",
+      "t": {
+        "ru": "Рутина быстро меня утомляет.",
+        "uz": "Rutin ishlar tez charchatadi."
+      },
+      "rev": false
+    },
+    {
+      "k": "конформный",
+      "t": {
+        "ru": "Мне важно соответствовать нормам группы.",
+        "uz": "Guruh me’yorlariga moslashish muhim."
+      },
+      "rev": false
+    },
+    {
+      "k": "конформный",
+      "t": {
+        "ru": "Я легко перенимаю привычки окружения.",
+        "uz": "Atrof odatlarini oson qabul qilaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "конформный",
+      "t": {
+        "ru": "Я предпочитаю не спорить с общим мнением.",
+        "uz": "Umumiy fikrga qarshi chiqmaslikni afzal ko‘raman."
+      },
+      "rev": false
+    },
+    {
+      "k": "конформный",
+      "t": {
+        "ru": "Мне просто отстаивать своё видение, даже против большинства.",
+        "uz": "Ko‘pchilikka qarshi bo‘lsa ham fikrimni himoya qilish oson."
+      },
+      "rev": true
+    },
+    {
+      "k": "конформный",
+      "t": {
+        "ru": "Я чувствую себя увереннее, когда «как у всех».",
+        "uz": "“Barcha kabi” bo‘lganda o‘zimni ishonchli his qilaman."
+      },
+      "rev": false
+    }
+  ],
+  "scoring": {
+    "гипертим": {
+      "ru": "Гипертимный",
+      "uz": "Gipertim"
+    },
+    "циклоид": {
+      "ru": "Циклоидный",
+      "uz": "Tsikloid"
+    },
+    "лабильный": {
+      "ru": "Лабильный",
+      "uz": "Labil"
+    },
+    "астеноневротический": {
+      "ru": "Астеноневротический",
+      "uz": "Astenonevrotik"
+    },
+    "сенситивный": {
+      "ru": "Сенситивный",
+      "uz": "Sensitiv"
+    },
+    "психастенический": {
+      "ru": "Психастенический",
+      "uz": "Psixastenik"
+    },
+    "шизоид": {
+      "ru": "Шизоидный",
+      "uz": "Shizoid"
+    },
+    "эпилептоид": {
+      "ru": "Эпилептоидный",
+      "uz": "Epileptoid"
+    },
+    "истероид": {
+      "ru": "Истероидный",
+      "uz": "Isteroid"
+    },
+    "неустойчивый": {
+      "ru": "Неустойчивый",
+      "uz": "Beqaror"
+    },
+    "конформный": {
+      "ru": "Конформный",
+      "uz": "Konform"
+    }
+  }
+}

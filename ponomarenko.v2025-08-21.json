@@ -1,0 +1,325 @@
+{
+  "key": "psycho7",
+  "version": "2025.08.21",
+  "status": "active",
+  "title": {
+    "ru": "Методика Пономаренко — 7 психотипов",
+    "uz": "Ponomarenko metodikasi — 7 psixotip"
+  },
+  "scale": {
+    "ru": "1 = совсем не про меня … 5 = полностью про меня",
+    "uz": "1 = men uchun mutlaqo to‘g‘ri emas … 5 = men uchun to‘liq to‘g‘ri"
+  },
+  "items": [
+    {
+      "k": "hyst",
+      "t": {
+        "ru": "Мне важно быть в центре внимания.",
+        "uz": "E’tibor markazida bo‘lish men uchun muhim."
+      },
+      "rev": false
+    },
+    {
+      "k": "hyst",
+      "t": {
+        "ru": "Я часто рассказываю о себе, чтобы произвести впечатление.",
+        "uz": "Ko‘pincha taassurot qoldirish uchun o‘zim haqimda gapiraman."
+      },
+      "rev": false
+    },
+    {
+      "k": "hyst",
+      "t": {
+        "ru": "Я спокойно отношусь к тому, что остаюсь в тени.",
+        "uz": "Soyada qolishga xotirjam munosabatdaman."
+      },
+      "rev": true
+    },
+    {
+      "k": "hyst",
+      "t": {
+        "ru": "Мне нравится быть на виду даже в мелочах.",
+        "uz": "Mayda narsalarda ham ko‘zga tashlanishni yoqtiraman."
+      },
+      "rev": false
+    },
+    {
+      "k": "hyst",
+      "t": {
+        "ru": "Без признания я чувствую себя некомфортно.",
+        "uz": "E’tirofsiz o‘zimni noqulay his qilaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "epil",
+      "t": {
+        "ru": "Я люблю порядок и строгие правила.",
+        "uz": "Tartib va qattiq qoidalarni yaxshi ko‘raman."
+      },
+      "rev": false
+    },
+    {
+      "k": "epil",
+      "t": {
+        "ru": "Меня раздражает хаос и неорганизованность.",
+        "uz": "Tartibsizlik meni asabiylashtiradi."
+      },
+      "rev": false
+    },
+    {
+      "k": "epil",
+      "t": {
+        "ru": "Мне легко адаптироваться, даже если правил нет.",
+        "uz": "Qoidalarsiz ham moslashishim oson."
+      },
+      "rev": true
+    },
+    {
+      "k": "epil",
+      "t": {
+        "ru": "Я требователен(льна) к себе и другим.",
+        "uz": "O‘zimga va boshqalarga talabchanman."
+      },
+      "rev": false
+    },
+    {
+      "k": "epil",
+      "t": {
+        "ru": "Я чувствую дискомфорт, когда процесс не под контролем.",
+        "uz": "Jarayon nazoratda bo‘lmasa, o‘zimni noqulay his qilaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "para",
+      "t": {
+        "ru": "Если я ставлю цель, я добиваюсь её.",
+        "uz": "Maqsad qo‘ysam, unga erishaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "para",
+      "t": {
+        "ru": "Я редко отказываюсь от начатого дела.",
+        "uz": "Boshlangan ishni kamdan-kam tashlab qo‘yaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "para",
+      "t": {
+        "ru": "Я легко сдаюсь при первых трудностях.",
+        "uz": "Birinchi qiyinchiliklarda tez taslim bo‘laman."
+      },
+      "rev": true
+    },
+    {
+      "k": "para",
+      "t": {
+        "ru": "Я умею вести за собой других.",
+        "uz": "Boshqalarni ergashtira olaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "para",
+      "t": {
+        "ru": "Я сосредоточен(на) на стратегических целях.",
+        "uz": "Strategik maqsadlarga e’tibor qarataman."
+      },
+      "rev": false
+    },
+    {
+      "k": "emot",
+      "t": {
+        "ru": "Я легко чувствую эмоции окружающих.",
+        "uz": "Atrofdagilarning hissiyotlarini tez sezaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "emot",
+      "t": {
+        "ru": "Я стараюсь избегать конфликтов.",
+        "uz": "Nizolardan qochishga harakat qilaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "emot",
+      "t": {
+        "ru": "Мне безразлично, что чувствуют другие.",
+        "uz": "Boshqalarning his-tuyg‘ulari menga befarq."
+      },
+      "rev": true
+    },
+    {
+      "k": "emot",
+      "t": {
+        "ru": "Я склонен(на) поддерживать и помогать людям.",
+        "uz": "Odamlarga yordam berishga moyilman."
+      },
+      "rev": false
+    },
+    {
+      "k": "emot",
+      "t": {
+        "ru": "Я переживаю за чужие проблемы как за свои.",
+        "uz": "Boshqalarning muammolarini o‘zimnikidek boshdan kechiraman."
+      },
+      "rev": false
+    },
+    {
+      "k": "schz",
+      "t": {
+        "ru": "Мне нравится работать в одиночку.",
+        "uz": "Yolg‘iz ishlashni yoqtiraman."
+      },
+      "rev": false
+    },
+    {
+      "k": "schz",
+      "t": {
+        "ru": "Я предпочитаю размышления общению.",
+        "uz": "Muloqotdan ko‘ra fikrlashni afzal ko‘raman."
+      },
+      "rev": false
+    },
+    {
+      "k": "schz",
+      "t": {
+        "ru": "Я легко завожу поверхностные знакомства.",
+        "uz": "Osonlikcha yuzaki tanishlar orttiraman."
+      },
+      "rev": true
+    },
+    {
+      "k": "schz",
+      "t": {
+        "ru": "У меня богатое воображение.",
+        "uz": "Mening tasavvurim boy."
+      },
+      "rev": false
+    },
+    {
+      "k": "schz",
+      "t": {
+        "ru": "Я часто погружаюсь в мир идей.",
+        "uz": "Ko‘pincha g‘oyalar olamiga sho‘ng‘ib ketaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "hyper",
+      "t": {
+        "ru": "Я энергичен(на) и подвижен(на).",
+        "uz": "Quvnoqman va faolman."
+      },
+      "rev": false
+    },
+    {
+      "k": "hyper",
+      "t": {
+        "ru": "Я быстро завожу новые знакомства.",
+        "uz": "Yangi tanishlarni tez orttiraman."
+      },
+      "rev": false
+    },
+    {
+      "k": "hyper",
+      "t": {
+        "ru": "Я спокойно переношу монотонную работу.",
+        "uz": "Monoton ishni bemalol bajara olaman."
+      },
+      "rev": true
+    },
+    {
+      "k": "hyper",
+      "t": {
+        "ru": "Мне сложно сидеть без дела.",
+        "uz": "Bekor o‘tirishim qiyin."
+      },
+      "rev": false
+    },
+    {
+      "k": "hyper",
+      "t": {
+        "ru": "Я люблю динамику и перемены.",
+        "uz": "Dinamika va o‘zgarishlarni yaxshi ko‘raman."
+      },
+      "rev": false
+    },
+    {
+      "k": "anx",
+      "t": {
+        "ru": "Я часто перепроверяю свои действия.",
+        "uz": "Ko‘pincha ishlarimni qayta tekshiraman."
+      },
+      "rev": false
+    },
+    {
+      "k": "anx",
+      "t": {
+        "ru": "Мне свойственна осторожность и сомнения.",
+        "uz": "Ehtiyotkor va shubhalanadiganman."
+      },
+      "rev": false
+    },
+    {
+      "k": "anx",
+      "t": {
+        "ru": "Я легко принимаю рискованные решения.",
+        "uz": "Xavfli qarorlarni oson qabul qilaman."
+      },
+      "rev": true
+    },
+    {
+      "k": "anx",
+      "t": {
+        "ru": "Я часто думаю о возможных ошибках.",
+        "uz": "Ko‘pincha mumkin bo‘lgan xatolar haqida o‘ylayman."
+      },
+      "rev": false
+    },
+    {
+      "k": "anx",
+      "t": {
+        "ru": "Я тревожусь даже из-за мелочей.",
+        "uz": "Mayda narsalar uchun ham xavotirlanaman."
+      },
+      "rev": false
+    }
+  ],
+  "scoring": {
+    "hyst": {
+      "ru": "Истероид",
+      "uz": "Isteroid"
+    },
+    "epil": {
+      "ru": "Эпилептоид",
+      "uz": "Epileptoid"
+    },
+    "para": {
+      "ru": "Параноид",
+      "uz": "Paranoid"
+    },
+    "emot": {
+      "ru": "Эмотив",
+      "uz": "Emotiv"
+    },
+    "schz": {
+      "ru": "Шизоид",
+      "uz": "Shizoid"
+    },
+    "hyper": {
+      "ru": "Гипертим",
+      "uz": "Gipertim"
+    },
+    "anx": {
+      "ru": "Тревожно-мнительный",
+      "uz": "Tashvishli"
+    }
+  }
+}
