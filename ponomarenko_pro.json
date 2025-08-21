@@ -1,0 +1,229 @@
+{
+  "key": "psycho7_pro",
+  "version": "2025.08.21-pro",
+  "status": "active",
+  "title": {
+    "ru": "Методика Пономаренко — 7 психотипов (PRO)",
+    "uz": "Ponomarenko — 7 psixotip (PRO)"
+  },
+  "scale": {
+    "ru": "1 = совсем не про меня … 5 = полностью про меня",
+    "uz": "1 = mutlaqo to‘g‘ri emas … 5 = to‘liq to‘g‘ri"
+  },
+  "items": [
+    {
+      "k": "hyst",
+      "t": {
+        "ru": "Мне важно быть в центре внимания.",
+        "uz": "E’tibor markazida bo‘lish men uchun muhim."
+      },
+      "rev": false
+    },
+    {
+      "k": "hyst",
+      "t": {
+        "ru": "Я спокойно отношусь к роли «за кадром».",
+        "uz": "“Kadr ortidagi” rolga xotirjam munosabatdaman."
+      },
+      "rev": true
+    },
+    {
+      "k": "hyst",
+      "t": {
+        "ru": "Я часто стараюсь произвести впечатление.",
+        "uz": "Ko‘pincha taassurot qoldirishga harakat qilaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "epil",
+      "t": {
+        "ru": "Мне комфортно, когда всё по правилам.",
+        "uz": "Hammasi qoidalarga muvofiq bo‘lsa, qulay."
+      },
+      "rev": false
+    },
+    {
+      "k": "epil",
+      "t": {
+        "ru": "Отсутствие регламента меня не напрягает.",
+        "uz": "Reglamsiz ishlash meni siqmaydi."
+      },
+      "rev": true
+    },
+    {
+      "k": "epil",
+      "t": {
+        "ru": "Люблю контролировать процесс до деталей.",
+        "uz": "Jarayonni tafsilotlarigacha nazorat qilishni yoqtiraman."
+      },
+      "rev": false
+    },
+    {
+      "k": "para",
+      "t": {
+        "ru": "Если ставлю цель — иду до результата.",
+        "uz": "Maqsad qo‘ysam, natijagacha boraman."
+      },
+      "rev": false
+    },
+    {
+      "k": "para",
+      "t": {
+        "ru": "Я быстро сдаюсь при трудностях.",
+        "uz": "Qiyinchiliklarda tez taslim bo‘laman."
+      },
+      "rev": true
+    },
+    {
+      "k": "para",
+      "t": {
+        "ru": "Могу вести за собой других.",
+        "uz": "Boshqalarni ergashtira olaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "emot",
+      "t": {
+        "ru": "Легко чувствую состояние людей.",
+        "uz": "Odamlarning holatini oson sezaman."
+      },
+      "rev": false
+    },
+    {
+      "k": "emot",
+      "t": {
+        "ru": "Мне безразличны эмоции окружающих.",
+        "uz": "Atrofdagilarning hissiyotlariga befarqman."
+      },
+      "rev": true
+    },
+    {
+      "k": "emot",
+      "t": {
+        "ru": "Люблю помогать и поддерживать.",
+        "uz": "Yordam va qo‘llab-quvvatlashni yoqtiraman."
+      },
+      "rev": false
+    },
+    {
+      "k": "schz",
+      "t": {
+        "ru": "Люблю работать в одиночку.",
+        "uz": "Yolg‘iz ishlashni yoqtiraman."
+      },
+      "rev": false
+    },
+    {
+      "k": "schz",
+      "t": {
+        "ru": "Легко поддерживаю светские беседы.",
+        "uz": "Yengil suhbatlarni oson davom ettiraman."
+      },
+      "rev": true
+    },
+    {
+      "k": "schz",
+      "t": {
+        "ru": "Часто ухожу в мир мыслей.",
+        "uz": "Ko‘pincha fikrlar olamiga sho‘ng‘iyman."
+      },
+      "rev": false
+    },
+    {
+      "k": "hyper",
+      "t": {
+        "ru": "Энергичен и подвижен.",
+        "uz": "Quvnoq va faolman."
+      },
+      "rev": false
+    },
+    {
+      "k": "hyper",
+      "t": {
+        "ru": "Монотонная работа даётся легко.",
+        "uz": "Monoton ish menga oson."
+      },
+      "rev": true
+    },
+    {
+      "k": "hyper",
+      "t": {
+        "ru": "Люблю динамику и перемены.",
+        "uz": "Dinamika va o‘zgarishlarni yoqtiraman."
+      },
+      "rev": false
+    },
+    {
+      "k": "anx",
+      "t": {
+        "ru": "Часто перепроверяю сделанное.",
+        "uz": "Ko‘pincha ishni qayta tekshiraman."
+      },
+      "rev": false
+    },
+    {
+      "k": "anx",
+      "t": {
+        "ru": "Легко принимаю рискованные решения.",
+        "uz": "Xavfli qarorlarni oson qabul qilaman."
+      },
+      "rev": true
+    },
+    {
+      "k": "anx",
+      "t": {
+        "ru": "Мелочи вызывают тревогу.",
+        "uz": "Maydalar tashvish uyg‘otadi."
+      },
+      "rev": false
+    },
+    {
+      "k": "trap",
+      "t": {
+        "ru": "Я никогда не пользовался телефоном.",
+        "uz": "Hech qachon telefon ishlatmaganman."
+      },
+      "rev": false
+    },
+    {
+      "k": "trap",
+      "t": {
+        "ru": "Я всегда сплю меньше одной минуты в сутки.",
+        "uz": "Har kuni bir daqiqadan kam uxlayman."
+      },
+      "rev": false
+    }
+  ],
+  "scoring": {
+    "hyst": {
+      "ru": "Истероид",
+      "uz": "Isteroid"
+    },
+    "epil": {
+      "ru": "Эпилептоид",
+      "uz": "Epileptoid"
+    },
+    "para": {
+      "ru": "Параноид",
+      "uz": "Paranoid"
+    },
+    "emot": {
+      "ru": "Эмотив",
+      "uz": "Emotiv"
+    },
+    "schz": {
+      "ru": "Шизоид",
+      "uz": "Shizoid"
+    },
+    "hyper": {
+      "ru": "Гипертим",
+      "uz": "Gipertim"
+    },
+    "anx": {
+      "ru": "Тревожно-мнительный",
+      "uz": "Tashvishli"
+    }
+  }
+}
