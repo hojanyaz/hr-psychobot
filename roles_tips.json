@@ -1,0 +1,187 @@
+{
+  "roles": ["Sales", "Logistics", "Finance", "R&D", "HR", "Manager"],
+  "psycho7_pro": {
+    "hyst": {
+      "Sales": {
+        "ru": "Используйте артистичность в презентациях и переговорах.",
+        "uz": "Taqdimot va muzokaralarda ijodkorlikdan foydalaning."
+      },
+      "Logistics": {
+        "ru": "Продвигайте идеи, но избегайте драмы в операциях.",
+        "uz": "G'oyalarni targ'ib qiling, lekin operatsiyada dramatizmga yo'l qo'ymang."
+      },
+      "Finance": {
+        "ru": "Презентационные навыки полезны для отчётов, но избегайте украшательств.",
+        "uz": "Taqdimot ko'nikmalari hisobotlar uchun foydali, lekin bezashdan saqlaning."
+      },
+      "R&D": {
+        "ru": "Умение презентовать идеи поможет продвигать проекты.",
+        "uz": "G'oyalarni taqdim etish qobiliyati loyihalarni targ'ib qilishga yordam beradi."
+      },
+      "HR": {
+        "ru": "Используйте артистичность в обучении и коммуникациях.",
+        "uz": "O'qitish va muloqotda ijodkorlikdan foydalaning."
+      },
+      "Manager": {
+        "ru": "Харизма помогает, но будьте честны.",
+        "uz": "Karizma yordam beradi, lekin halol bo'ling."
+      }
+    },
+    "epil": {
+      "Sales": {
+        "ru": "Порядок в продажах важен: ведите CRM и процессы.",
+        "uz": "Savdolarda tartib muhim: CRMni yuriting va jarayonlarni kuzating."
+      },
+      "Logistics": {
+        "ru": "Организованность — ключ к управлению цепочкой поставок.",
+        "uz": "Tashkiliy bo'lish ta'minot zanjirini boshqarishda kalit omil."
+      },
+      "Finance": {
+        "ru": "Системность необходима для финансового учёта.",
+        "uz": "Tizimlilik moliyaviy hisobda zarur."
+      },
+      "R&D": {
+        "ru": "Структура важна для исследований; следуйте методикам.",
+        "uz": "Tadqiqotlar uchun struktura muhim; metodologiyalarga rioya qiling."
+      },
+      "HR": {
+        "ru": "Системность важна для процессов найма.",
+        "uz": "Ishga olish jarayonlari uchun tizimlilik muhim."
+      },
+      "Manager": {
+        "ru": "Структура необходима для управления командой.",
+        "uz": "Tuzilma jamoani boshqarish uchun zarur."
+      }
+    },
+    "para": {
+      "Sales": {
+        "ru": "Целеустремлённость помогает закрывать сделки; ставьте амбициозные цели.",
+        "uz": "Maqsadga yo'naltirilganlik bitimlarni yopishda yordam beradi; baland maqsadlar qo'ying."
+      },
+      "Logistics": {
+        "ru": "Настойчивость помогает решать проблемы доставки.",
+        "uz": "Qat'iyat yetkazib berish muammolarini hal qilishga yordam beradi."
+      },
+      "Finance": {
+        "ru": "Стратегический подход помогает в бюджетировании.",
+        "uz": "Strategik yondashuv byudjet tuzishda yordam beradi."
+      },
+      "R&D": {
+        "ru": "Целеустремлённость ведёт к научным открытиям.",
+        "uz": "Maqsadga yo'naltirilganlik ilmiy kashfiyotlarga olib keladi."
+      },
+      "HR": {
+        "ru": "Стратегичность помогает развивать корпоративную культуру.",
+        "uz": "Strategiklik korporativ madaniyatni rivojlantirishga yordam beradi."
+      },
+      "Manager": {
+        "ru": "Целеустремлённость ведёт команду к результату.",
+        "uz": "Maqsadga yo'naltirilganlik jamoani natijaga olib boradi."
+      }
+    },
+    "emot": {
+      "Sales": {
+        "ru": "Используйте эмпатию, чтобы понимать потребности клиента.",
+        "uz": "Mijoz ehtiyojlarini tushunishda empatiyadan foydalaning."
+      },
+      "Logistics": {
+        "ru": "Забота о команде улучшает взаимодействие с курьерами.",
+        "uz": "Jamoaga g'amxo'rlik kuryerlar bilan hamkorlikni yaxshilaydi."
+      },
+      "Finance": {
+        "ru": "Эмпатия важна для понимания потребностей коллег.",
+        "uz": "Empatiya hamkasblar ehtiyojlarini tushunishda muhim."
+      },
+      "R&D": {
+        "ru": "Эмпатия улучшает коллаборацию в команде.",
+        "uz": "Empatiya jamoa hamkorligini yaxshilaydi."
+      },
+      "HR": {
+        "ru": "Эмпатия — основной навык HR.",
+        "uz": "Empatiya — HRning asosiy ko'nikmasi."
+      },
+      "Manager": {
+        "ru": "Эмпатия помогает мотивировать сотрудников.",
+        "uz": "Empatiya xodimlarni rag'batlantirishga yordam beradi."
+      }
+    },
+    "schz": {
+      "Sales": {
+        "ru": "Анализируйте рынок, но работайте в команде для коммуникаций.",
+        "uz": "Bozorni tahlil qiling, lekin muloqot uchun jamoa bilan ishlang."
+      },
+      "Logistics": {
+        "ru": "Аналитические способности полезны для планирования маршрутов.",
+        "uz": "Tahliliy qobiliyat yo'nalishlarni rejalashtirishda foydali."
+      },
+      "Finance": {
+        "ru": "Аналитический ум нужен для финансовых моделей.",
+        "uz": "Tahliliy aql moliyaviy modellar uchun kerak."
+      },
+      "R&D": {
+        "ru": "Глубокое мышление и креативность — главный ресурс.",
+        "uz": "Chuqur fikrlash va ijodkorlik asosiy resursdir."
+      },
+      "HR": {
+        "ru": "Аналитические навыки помогут в оценке кандидатов.",
+        "uz": "Tahliliy ko'nikmalar nomzodlarni baholashda yordam beradi."
+      },
+      "Manager": {
+        "ru": "Креативное мышление важно для стратегии.",
+        "uz": "Ijodiy fikrlash strategiya uchun muhim."
+      }
+    },
+    "hyper": {
+      "Sales": {
+        "ru": "Энергия и оптимизм привлекают клиентов; держите фокус.",
+        "uz": "Energiya va optimizm mijozlarni o'ziga tortadi; diqqatni jamlang."
+      },
+      "Logistics": {
+        "ru": "Энергия помогает решать срочные задачи; не забывайте про детали.",
+        "uz": "Energiya shoshilinch vazifalarni hal qilishga yordam beradi; detallarga e'tibor bering."
+      },
+      "Finance": {
+        "ru": "Энергия поможет в переговорах с инвесторами.",
+        "uz": "Energiya investorlar bilan muzokaralarda yordam beradi."
+      },
+      "R&D": {
+        "ru": "Энергия помогает генерировать новые идеи.",
+        "uz": "Energiya yangi g'oyalar yaratishga yordam beradi."
+      },
+      "HR": {
+        "ru": "Энергия заряжает команду; следите за дисциплиной.",
+        "uz": "Energiya jamoani quvvatlantiradi; intizomni nazorat qiling."
+      },
+      "Manager": {
+        "ru": "Энергия заряжает команду; следите за фокусом.",
+        "uz": "Energiya jamoani quvvatlantiradi; diqqatni nazorat qiling."
+      }
+    },
+    "anx": {
+      "Sales": {
+        "ru": "Внимательность помогает избегать ошибок в договорах.",
+        "uz": "Diqqat shartnomalarda xatolarni oldini oladi."
+      },
+      "Logistics": {
+        "ru": "Внимательность к деталям снижает риски в доставке.",
+        "uz": "Detallarga e'tibor yetkazib berishda xavflarni kamaytiradi."
+      },
+      "Finance": {
+        "ru": "Внимательность снижает вероятность ошибок в расчётах.",
+        "uz": "Diqqat hisoblardagi xatolarni kamaytiradi."
+      },
+      "R&D": {
+        "ru": "Внимательность нужна для проверки гипотез.",
+        "uz": "Hipotezlarni tekshirish uchun diqqat zarur."
+      },
+      "HR": {
+        "ru": "Внимательность защищает от ошибок в документах.",
+        "uz": "Diqqat hujjatlardagi xatolarni oldini oladi."
+      },
+      "Manager": {
+        "ru": "Внимательность помогает избегать ошибок в планировании.",
+        "uz": "Diqqat rejalashtirishdagi xatolarni oldini oladi."
+      }
+    }
+  }
+}

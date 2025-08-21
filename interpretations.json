@@ -1,0 +1,88 @@
+{
+  "psycho7_pro": {
+    "hyst": {
+      "ru": {
+        "strengths": "Артистичность, вдохновляет, умеет привлекать внимание.",
+        "risks": "Склонность к драматизации, поверхностность, приукрашивание.",
+        "tips": "Давайте роли, где важны презентации и продажи; обеспечивайте признание; избегайте монотонной рутины."
+      },
+      "uz": {
+        "strengths": "Ijodkorlik, ilhomlantirish, e'tiborni torta oladi.",
+        "risks": "Dramatiklik, yuzaki yondashuv, bezash.",
+        "tips": "Taqdimot va savdo vazifalarini bering; tan olinishni ta'minlang; monoton ishlarni chetlab o'ting."
+      }
+    },
+    "epil": {
+      "ru": {
+        "strengths": "Дисциплина, системность, ответственность.",
+        "risks": "Жёсткость, педантизм, упрямство.",
+        "tips": "Назначайте на задачи по процессам и качеству; давайте чёткие правила; избегайте хаотической среды."
+      },
+      "uz": {
+        "strengths": "Tartib, sistemalilik, mas'uliyat.",
+        "risks": "Qattiqqo'llik, pedantlik, jiddiylik.",
+        "tips": "Jarayon va sifat nazorati vazifalarini bering; aniq qoidalar; xaosdan saqlaning."
+      }
+    },
+    "para": {
+      "ru": {
+        "strengths": "Целеустремлённость, лидерство, стратегическое мышление.",
+        "risks": "Подозрительность, властность, чрезмерная жёсткость.",
+        "tips": "Давайте стратегические роли; доверяйте принятие решений; контролируйте уровень стресса."
+      },
+      "uz": {
+        "strengths": "Maqsadga intilish, liderlik, strategik fikrlash.",
+        "risks": "Shubha, hukmronlik, qat'iylik.",
+        "tips": "Strategik rollar bering; qaror qabul qilish vakolatini bering; stress darajasini nazorat qiling."
+      }
+    },
+    "emot": {
+      "ru": {
+        "strengths": "Эмпатия, поддержка, стремление к гармонии.",
+        "risks": "Ранимость, зависимость от чужого мнения, избегание конфликтов.",
+        "tips": "Используйте в HR и наставничестве; обеспечивайте безопасную среду; избегайте жёсткой критики."
+      },
+      "uz": {
+        "strengths": "Empatiya, qo'llab-quvvatlash, uyg'unlik.",
+        "risks": "Tez ranjish, boshqalarning fikriga bog'liqlik, tortishuvlardan qochish.",
+        "tips": "HR va murabbiylik vazifalarida foydalaning; xavfsiz muhit yarating; keskin tanqiddan saqlaning."
+      }
+    },
+    "schz": {
+      "ru": {
+        "strengths": "Креативность, глубокое мышление, независимость.",
+        "risks": "Замкнутость, холодность, трудности в общении.",
+        "tips": "Давайте задачи по исследованиям и аналитике; предоставляйте автономию; поддерживайте ясную коммуникацию."
+      },
+      "uz": {
+        "strengths": "Ijodkorlik, chuqur fikrlash, mustaqillik.",
+        "risks": "Yopiq, sovuq, muloqotda qiyinchilik.",
+        "tips": "Tadqiqot va tahlil vazifalarini bering; mustaqillik ta'minlang; aniq aloqa kanallarini saqlang."
+      }
+    },
+    "hyper": {
+      "ru": {
+        "strengths": "Энергия, оптимизм, общительность.",
+        "risks": "Поверхностность, импульсивность, несобранность.",
+        "tips": "Назначайте на продажи и организацию мероприятий; создавайте структуру; помогайте расставлять приоритеты."
+      },
+      "uz": {
+        "strengths": "Energiya, optimizm, muloqotga ochiqlik.",
+        "risks": "Yuzaki yondashuv, impulsivlik, tartibsizlik.",
+        "tips": "Savdo va tadbir tashkil qilish vazifalarini bering; tuzilma yarating; ustuvorlikni belgilashda yordam bering."
+      }
+    },
+    "anx": {
+      "ru": {
+        "strengths": "Надёжность, внимательность, преданность.",
+        "risks": "Нерешительность, тревожность, низкая стрессоустойчивость.",
+        "tips": "Давайте детальные задачи; предоставляйте чёткие инструкции; регулярно давайте обратную связь."
+      },
+      "uz": {
+        "strengths": "Ishonchlilik, diqqat, sadoqat.",
+        "risks": "Ikkiyoqlamalik, tashvish, past stressga chidamlilik.",
+        "tips": "Detalga yo'naltirilgan vazifalar bering; aniq ko'rsatmalar; muntazam fikr bildiring."
+      }
+    }
+  }
+}

@@ -1,245 +1,55 @@
 {
   "key": "leonhard_pro",
-  "version": "2025.08.21-pro",
+  "version": "2025.08.21",
   "status": "active",
   "title": {
-    "ru": "Леонгард (PRO) — акцентуации",
-    "uz": "Leongard (PRO) — aktsentuatsiya"
+    "ru": "Тест акцентуаций характера — Леонгард (PRO)",
+    "uz": "Xarakter aktsentuatsiyasi testi — Leonhard (PRO)"
   },
   "scale": {
     "ru": "1 = не согласен … 5 = полностью согласен",
     "uz": "1 = rozi emasman … 5 = to‘liq rozi bo‘laman"
   },
   "items": [
-    {
-      "k": "демонстративный",
-      "t": {
-        "ru": "Мне нравится быть на виду.",
-        "uz": "Ko‘zga tashlanishni yoqtiraman."
-      },
-      "rev": false
-    },
-    {
-      "k": "демонстративный",
-      "t": {
-        "ru": "Чужое внимание мне безразлично.",
-        "uz": "Boshqalarning e’tibori menga befarq."
-      },
-      "rev": true
-    },
-    {
-      "k": "педантичный",
-      "t": {
-        "ru": "Предпочитаю порядок и чёткость.",
-        "uz": "Tartib va aniqlikni afzal ko‘raman."
-      },
-      "rev": false
-    },
-    {
-      "k": "педантичный",
-      "t": {
-        "ru": "Легко импровизирую без плана.",
-        "uz": "Rejasiz improvizatsiya qilish oson."
-      },
-      "rev": true
-    },
-    {
-      "k": "застревающий",
-      "t": {
-        "ru": "Долго помню обиды.",
-        "uz": "Xafagarchilikni uzoq eslayman."
-      },
-      "rev": false
-    },
-    {
-      "k": "застревающий",
-      "t": {
-        "ru": "Легко отпускаю прошлое.",
-        "uz": "O‘tmishni oson qo‘yib yuboraman."
-      },
-      "rev": true
-    },
-    {
-      "k": "возбудимый",
-      "t": {
-        "ru": "Мне сложно сдерживать эмоции.",
-        "uz": "Hissiyotlarni tiyish qiyin."
-      },
-      "rev": false
-    },
-    {
-      "k": "возбудимый",
-      "t": {
-        "ru": "Всегда сохраняю хладнокровие.",
-        "uz": "Har doim xotirjamlikni saqlayman."
-      },
-      "rev": true
-    },
-    {
-      "k": "гипертимный",
-      "t": {
-        "ru": "Я активен и общителен.",
-        "uz": "Faol va muloqotga ochiqman."
-      },
-      "rev": false
-    },
-    {
-      "k": "гипертимный",
-      "t": {
-        "ru": "Мне легко заниматься однообразной работой.",
-        "uz": "Bir xil ish bilan shug‘ullanish oson."
-      },
-      "rev": true
-    },
-    {
-      "k": "дистимный",
-      "t": {
-        "ru": "Я сдержан и серьёзен.",
-        "uz": "Vazmin va jiddiyman."
-      },
-      "rev": false
-    },
-    {
-      "k": "дистимный",
-      "t": {
-        "ru": "Обычно у меня приподнятое настроение.",
-        "uz": "Odatda kayfiyatim ko‘tarinki."
-      },
-      "rev": true
-    },
-    {
-      "k": "тревожный",
-      "t": {
-        "ru": "Часто переживаю об ошибках.",
-        "uz": "Ko‘pincha xatolar haqida xavotirlanaman."
-      },
-      "rev": false
-    },
-    {
-      "k": "тревожный",
-      "t": {
-        "ru": "Легко действую рискованно.",
-        "uz": "Xavfli harakat qilish oson."
-      },
-      "rev": true
-    },
-    {
-      "k": "экзальтированный",
-      "t": {
-        "ru": "Сильно переживаю радости и успехи.",
-        "uz": "Quvonch va muvaffaqiyatlarni kuchli his qilaman."
-      },
-      "rev": false
-    },
-    {
-      "k": "экзальтированный",
-      "t": {
-        "ru": "Почти на всё реагирую ровно.",
-        "uz": "Deyarli hammasiga barqaror munosabatdaman."
-      },
-      "rev": true
-    },
-    {
-      "k": "эмотивный",
-      "t": {
-        "ru": "Тонко чувствую состояние других.",
-        "uz": "Boshqalarning holatini nozik sezaman."
-      },
-      "rev": false
-    },
-    {
-      "k": "эмотивный",
-      "t": {
-        "ru": "Мне всё равно на эмоции окружающих.",
-        "uz": "Atrofdagilar hissiyotlari menga baribir."
-      },
-      "rev": true
-    },
-    {
-      "k": "циклотимный",
-      "t": {
-        "ru": "Активность сменяется усталостью и спадом.",
-        "uz": "Faollik charchoq va pasayish bilan almashadi."
-      },
-      "rev": false
-    },
-    {
-      "k": "циклотимный",
-      "t": {
-        "ru": "Моё состояние стабильно и ровно.",
-        "uz": "Holatim barqaror va tekis."
-      },
-      "rev": true
-    },
-    {
-      "k": "аффективно-лабильный",
-      "t": {
-        "ru": "Эмоции быстро меняются по ситуации.",
-        "uz": "Hissiyotlar vaziyatga ko‘ra tez o‘zgaradi."
-      },
-      "rev": false
-    },
-    {
-      "k": "аффективно-лабильный",
-      "t": {
-        "ru": "Почти всегда одинаковое настроение.",
-        "uz": "Kayfiyat deyarli doim bir xil."
-      },
-      "rev": true
-    },
-    {
-      "k": "trap",
-      "t": {
-        "ru": "Я никогда не дышу воздухом.",
-        "uz": "Hech qachon havo olmayman."
-      },
-      "rev": false
-    }
+    {"k": "демонстративный", "t": {"ru": "Мне важно производить впечатление на окружающих.", "uz": "Atrofdagilarga taassurot qoldirish men uchun muhim."}, "rev": false},
+    {"k": "демонстративный", "t": {"ru": "Я предпочитаю оставаться незаметным.", "uz": "Men ko‘rinmas bo‘lib qolishni afzal ko‘raman."}, "rev": true},
+    {"k": "гипертим", "t": {"ru": "Я оптимистичен(на) и энергичен(на).", "uz": "Men optimist va energiyaman."}, "rev": false},
+    {"k": "гипертим", "t": {"ru": "Я часто испытываю упадок настроения.", "uz": "Men ko‘pincha kayfiyat tushkunligini boshdan kechiraman."}, "rev": true},
+    {"k": "дистимический", "t": {"ru": "Меня часто посещает грусть без причины.", "uz": "Ko‘pincha sababsiz xafalik boshimga keladi."}, "rev": false},
+    {"k": "дистимический", "t": {"ru": "Я обычно счастлив(а) и доволен(на) жизнью.", "uz": "Men odatda baxtli va hayotdan mamnunman."}, "rev": true},
+    {"k": "циклотимический", "t": {"ru": "Моё настроение часто меняется от подъёма к упадку.", "uz": "Mening kayfiyatim ko‘pincha ko‘tarilishdan tushkunlikka o‘zgaradi."}, "rev": false},
+    {"k": "циклотимический", "t": {"ru": "Моё настроение всегда стабильно.", "uz": "Mening kayfiyatim har doim barqaror."}, "rev": true},
+    {"k": "тревожный", "t": {"ru": "Я склонен(на) нервничать по пустякам.", "uz": "Men mayda narsalar uchun asabiylashishga moyilman."}, "rev": false},
+    {"k": "тревожный", "t": {"ru": "Я редко беспокоюсь о мелочах.", "uz": "Men mayda-chuydalar haqida kamdan-kam xavotirlanaman."}, "rev": true},
+    {"k": "экзальтированный", "t": {"ru": "Я легко вдохновляюсь и воодушевляюсь.", "uz": "Men oson ruhlanaman va ilhomlanaman."}, "rev": false},
+    {"k": "экзальтированный", "t": {"ru": "Я редко испытываю сильные эмоции.", "uz": "Men kamdan-kam kuchli hissiyotlarni boshdan kechiraman."}, "rev": true},
+    {"k": "эмотивный", "t": {"ru": "Я глубоко переживаю за близких.", "uz": "Men yaqinlarim uchun chuqur qayg‘uraman."}, "rev": false},
+    {"k": "эмотивный", "t": {"ru": "Я не очень реагирую на чужие переживания.", "uz": "Men boshqalarning qayg‘ulariga unchalik munosabat bildirmayman."}, "rev": true},
+    {"k": "педантичный", "t": {"ru": "Мне важно, чтобы всё было по правилам.", "uz": "Men uchun hammasi qoidalarga muvofiq bo‘lishi muhim."}, "rev": false},
+    {"k": "педантичный", "t": {"ru": "Я легко отношусь к мелким нарушениям порядка.", "uz": "Men tartibdagi kichik buzilishlarga xotirjam qarayman."}, "rev": true},
+    {"k": "лабильный", "t": {"ru": "Моё настроение зависит от ситуации и людей вокруг.", "uz": "Mening kayfiyatim holat va atrofdagilar bilan bog‘liq."}, "rev": false},
+    {"k": "лабильный", "t": {"ru": "Моё настроение обычно не зависит от окружения.", "uz": "Mening kayfiyatim odatda atrofdagilarga bog‘liq emas."}, "rev": true},
+    {"k": "астеничный", "t": {"ru": "Я быстро устаю и чувствую слабость.", "uz": "Men tez charchayman va zaiflikni his qilaman."}, "rev": false},
+    {"k": "астеничный", "t": {"ru": "У меня достаточно энергии для длительной работы.", "uz": "Menda uzoq ishlash uchun yetarli energiya bor."}, "rev": true},
+    {"k": "шизоидный", "t": {"ru": "Я предпочитаю жить в мире идей, а не людей.", "uz": "Men odamlar dunyosidan ko‘ra g‘oyalar dunyosida yashashni afzal ko‘raman."}, "rev": false},
+    {"k": "шизоидный", "t": {"ru": "Мне нравится проводить время в большой компании.", "uz": "Men katta jamoa bilan vaqt o'tkazishni yoqtiraman."}, "rev": true},
+    {"k": "эпилептоидный", "t": {"ru": "Я люблю устанавливать правила и следовать им.", "uz": "Men qoidalar o‘rnatishni va ularga rioya qilishni yaxshi ko‘raman."}, "rev": false},
+    {"k": "эпилептоидный", "t": {"ru": "Мне легко жить без правил и структуры.", "uz": "Men qoidalar va tuzilmasiz yashashni oson deb bilaman."}, "rev": true},
+    {"k": "trap", "t": {"ru": "Я считаю, что трава бывает синей.", "uz": "Men maysani ko‘k rangda deb hisoblayman."}, "rev": false},
+    {"k": "trap", "t": {"ru": "Я бы предпочёл(а) съесть лампочку, чем яблоко.", "uz": "Men olma o‘rniga lampochka yegan bo‘lardim."}, "rev": false}
   ],
   "scoring": {
-    "демонстративный": {
-      "ru": "Демонстративный",
-      "uz": "Namoyishkor"
-    },
-    "педантичный": {
-      "ru": "Педантичный",
-      "uz": "Pedantik"
-    },
-    "застревающий": {
-      "ru": "Застревающий",
-      "uz": "Qotib qoluvchi"
-    },
-    "возбудимый": {
-      "ru": "Возбудимый",
-      "uz": "Qo‘zg‘aluvchan"
-    },
-    "гипертимный": {
-      "ru": "Гипертимный",
-      "uz": "Gipertim"
-    },
-    "дистимный": {
-      "ru": "Дистимный",
-      "uz": "Distim"
-    },
-    "тревожный": {
-      "ru": "Тревожный",
-      "uz": "Tashvishli"
-    },
-    "экзальтированный": {
-      "ru": "Экзальтированный",
-      "uz": "Ekzaltatsiyalangan"
-    },
-    "эмотивный": {
-      "ru": "Эмотивный",
-      "uz": "Emotiv"
-    },
-    "циклотимный": {
-      "ru": "Циклотимный",
-      "uz": "Tsiklotim"
-    },
-    "аффективно-лабильный": {
-      "ru": "Аффективно-лабильный",
-      "uz": "Affektiv-labil"
-    }
+    "демонстративный": {"ru": "Демонстративный", "uz": "Namoyishkor"},
+    "гипертим": {"ru": "Гипертимный", "uz": "Gipertim"},
+    "дистимический": {"ru": "Дистимический", "uz": "Distimik"},
+    "циклотимический": {"ru": "Циклотимический", "uz": "Tsiklotimik"},
+    "тревожный": {"ru": "Тревожный", "uz": "Tashvishli"},
+    "экзальтированный": {"ru": "Экзальтированный", "uz": "Exzalatsiyalangan"},
+    "эмотивный": {"ru": "Эмотивный", "uz": "Emotiv"},
+    "педантичный": {"ru": "Педантичный", "uz": "Pedantik"},
+    "лабильный": {"ru": "Лабильный", "uz": "Labil"},
+    "астеничный": {"ru": "Астеничный", "uz": "Astenik"},
+    "шизоидный": {"ru": "Шизоидный", "uz": "Shizoid"},
+    "эпилептоидный": {"ru": "Эпилептоидный", "uz": "Epileptoid"}
   }
 }

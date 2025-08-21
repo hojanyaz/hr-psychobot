@@ -1,200 +1,61 @@
 {
-  "key": "psycho7_pro",
-  "version": "2025.08.21-pro",
+  "key": "ponomarenko_pro",
+  "version": "2025.08.21",
   "status": "active",
   "title": {
     "ru": "Методика Пономаренко — 7 психотипов (PRO)",
-    "uz": "Ponomarenko — 7 psixotip (PRO)"
+    "uz": "Ponomarenko metodikasi — 7 psixotip (PRO)"
   },
   "scale": {
     "ru": "1 = совсем не про меня … 5 = полностью про меня",
-    "uz": "1 = mutlaqo to‘g‘ri emas … 5 = to‘liq to‘g‘ri"
+    "uz": "1 = men uchun mutlaqo to‘g‘ri emas … 5 = men uchun to‘liq to‘g‘ri"
   },
   "items": [
-    {
-      "k": "hyst",
-      "t": {
-        "ru": "Мне важно быть в центре внимания.",
-        "uz": "E’tibor markazida bo‘lish men uchun muhim."
-      },
-      "rev": false
-    },
-    {
-      "k": "hyst",
-      "t": {
-        "ru": "Я спокойно отношусь к роли «за кадром».",
-        "uz": "“Kadr ortidagi” rolga xotirjam munosabatdaman."
-      },
-      "rev": true
-    },
-    {
-      "k": "hyst",
-      "t": {
-        "ru": "Я часто стараюсь произвести впечатление.",
-        "uz": "Ko‘pincha taassurot qoldirishga harakat qilaman."
-      },
-      "rev": false
-    },
-    {
-      "k": "epil",
-      "t": {
-        "ru": "Мне комфортно, когда всё по правилам.",
-        "uz": "Hammasi qoidalarga muvofiq bo‘lsa, qulay."
-      },
-      "rev": false
-    },
-    {
-      "k": "epil",
-      "t": {
-        "ru": "Отсутствие регламента меня не напрягает.",
-        "uz": "Reglamsiz ishlash meni siqmaydi."
-      },
-      "rev": true
-    },
-    {
-      "k": "epil",
-      "t": {
-        "ru": "Люблю контролировать процесс до деталей.",
-        "uz": "Jarayonni tafsilotlarigacha nazorat qilishni yoqtiraman."
-      },
-      "rev": false
-    },
-    {
-      "k": "para",
-      "t": {
-        "ru": "Если ставлю цель — иду до результата.",
-        "uz": "Maqsad qo‘ysam, natijagacha boraman."
-      },
-      "rev": false
-    },
-    {
-      "k": "para",
-      "t": {
-        "ru": "Я быстро сдаюсь при трудностях.",
-        "uz": "Qiyinchiliklarda tez taslim bo‘laman."
-      },
-      "rev": true
-    },
-    {
-      "k": "para",
-      "t": {
-        "ru": "Могу вести за собой других.",
-        "uz": "Boshqalarni ergashtira olaman."
-      },
-      "rev": false
-    },
-    {
-      "k": "emot",
-      "t": {
-        "ru": "Легко чувствую состояние людей.",
-        "uz": "Odamlarning holatini oson sezaman."
-      },
-      "rev": false
-    },
-    {
-      "k": "emot",
-      "t": {
-        "ru": "Мне безразличны эмоции окружающих.",
-        "uz": "Atrofdagilarning hissiyotlariga befarqman."
-      },
-      "rev": true
-    },
-    {
-      "k": "emot",
-      "t": {
-        "ru": "Люблю помогать и поддерживать.",
-        "uz": "Yordam va qo‘llab-quvvatlashni yoqtiraman."
-      },
-      "rev": false
-    },
-    {
-      "k": "schz",
-      "t": {
-        "ru": "Люблю работать в одиночку.",
-        "uz": "Yolg‘iz ishlashni yoqtiraman."
-      },
-      "rev": false
-    },
-    {
-      "k": "schz",
-      "t": {
-        "ru": "Легко поддерживаю светские беседы.",
-        "uz": "Yengil suhbatlarni oson davom ettiraman."
-      },
-      "rev": true
-    },
-    {
-      "k": "schz",
-      "t": {
-        "ru": "Часто ухожу в мир мыслей.",
-        "uz": "Ko‘pincha fikrlar olamiga sho‘ng‘iyman."
-      },
-      "rev": false
-    },
-    {
-      "k": "hyper",
-      "t": {
-        "ru": "Энергичен и подвижен.",
-        "uz": "Quvnoq va faolman."
-      },
-      "rev": false
-    },
-    {
-      "k": "hyper",
-      "t": {
-        "ru": "Монотонная работа даётся легко.",
-        "uz": "Monoton ish menga oson."
-      },
-      "rev": true
-    },
-    {
-      "k": "hyper",
-      "t": {
-        "ru": "Люблю динамику и перемены.",
-        "uz": "Dinamika va o‘zgarishlarni yoqtiraman."
-      },
-      "rev": false
-    },
-    {
-      "k": "anx",
-      "t": {
-        "ru": "Часто перепроверяю сделанное.",
-        "uz": "Ko‘pincha ishni qayta tekshiraman."
-      },
-      "rev": false
-    },
-    {
-      "k": "anx",
-      "t": {
-        "ru": "Легко принимаю рискованные решения.",
-        "uz": "Xavfli qarorlarni oson qabul qilaman."
-      },
-      "rev": true
-    },
-    {
-      "k": "anx",
-      "t": {
-        "ru": "Мелочи вызывают тревогу.",
-        "uz": "Maydalar tashvish uyg‘otadi."
-      },
-      "rev": false
-    },
-    {
-      "k": "trap",
-      "t": {
-        "ru": "Я никогда не пользовался телефоном.",
-        "uz": "Hech qachon telefon ishlatmaganman."
-      },
-      "rev": false
-    },
-    {
-      "k": "trap",
-      "t": {
-        "ru": "Я всегда сплю меньше одной минуты в сутки.",
-        "uz": "Har kuni bir daqiqadan kam uxlayman."
-      },
-      "rev": false
-    }
+    {"k": "hyst", "t": {"ru": "Мне важно быть в центре внимания.", "uz": "E’tibor markazida bo‘lish men uchun muhim."}, "rev": false},
+    {"k": "hyst", "t": {"ru": "Я часто рассказываю о себе, чтобы произвести впечатление.", "uz": "Men ko‘pincha o‘zim haqida gapirib taassurot qoldirishga harakat qilaman."}, "rev": false},
+    {"k": "hyst", "t": {"ru": "Я спокойно отношусь к тому, что остаюсь в тени.", "uz": "Men soyada qolishga xotirjam munosabatdaman."}, "rev": true},
+    {"k": "hyst", "t": {"ru": "Мне нравится быть на виду даже в мелочах.", "uz": "Mayda narsalarda ham ko‘zga tashlanishni yoqtiraman."}, "rev": false},
+    {"k": "hyst", "t": {"ru": "Без признания я чувствую себя некомфортно.", "uz": "E’tirofsiz o‘zimni noqulay his qilaman."}, "rev": false},
+    {"k": "hyst", "t": {"ru": "Я охотно делюсь своими успехами.", "uz": "Men o‘z muvaffaqiyatlarimni mamnuniyat bilan bo‘lishaman."}, "rev": false},
+    {"k": "epil", "t": {"ru": "Я люблю порядок и строгие правила.", "uz": "Men tartib va qattiq qoidalarni yaxshi ko‘raman."}, "rev": false},
+    {"k": "epil", "t": {"ru": "Меня раздражает хаос и неорганизованность.", "uz": "Tartibsizlik va betartiblik meni asabiylashtiradi."}, "rev": false},
+    {"k": "epil", "t": {"ru": "Мне легко адаптироваться, даже если правил нет.", "uz": "Qoidalar bo‘lmasa ham moslashishim oson."}, "rev": true},
+    {"k": "epil", "t": {"ru": "Я требователен(льна) к себе и другим.", "uz": "Men o‘zimga va boshqalarga talabchanman."}, "rev": false},
+    {"k": "epil", "t": {"ru": "Я чувствую дискомфорт, когда процесс не под контролем.", "uz": "Jarayon nazoratda bo‘lmaganda o‘zimni noqulay his qilaman."}, "rev": false},
+    {"k": "epil", "t": {"ru": "Мне сложно работать без плана.", "uz": "Menga rejalarsiz ishlash qiyin."}, "rev": false},
+    {"k": "para", "t": {"ru": "Если я ставлю цель, я добиваюсь её.", "uz": "Agar maqsad qo‘ysam, unga erishaman."}, "rev": false},
+    {"k": "para", "t": {"ru": "Я редко отказываюсь от начатого дела.", "uz": "Boshlangan ishni kamdan-kam tashlab qo‘yaman."}, "rev": false},
+    {"k": "para", "t": {"ru": "Я легко сдаюсь при первых трудностях.", "uz": "Birinchi qiyinchiliklarda tez taslim bo‘laman."}, "rev": true},
+    {"k": "para", "t": {"ru": "Я умею вести за собой других.", "uz": "Men boshqalarni o‘zim bilan ergashtira olaman."}, "rev": false},
+    {"k": "para", "t": {"ru": "Я сосредоточен(на) на стратегических целях.", "uz": "Men strategik maqsadlarga e’tibor qarataman."}, "rev": false},
+    {"k": "para", "t": {"ru": "Я хорошо планирую долгосрочные задачи.", "uz": "Men uzoq muddatli vazifalarni yaxshi rejalashtiraman."}, "rev": false},
+    {"k": "emot", "t": {"ru": "Я легко чувствую эмоции окружающих.", "uz": "Atrofdagilarning hissiyotlarini tez sezaman."}, "rev": false},
+    {"k": "emot", "t": {"ru": "Я стараюсь избегать конфликтов.", "uz": "Men nizolardan qochishga harakat qilaman."}, "rev": false},
+    {"k": "emot", "t": {"ru": "Мне безразлично, что чувствуют другие.", "uz": "Boshqalarning his-tuyg‘ulari menga befarq."}, "rev": true},
+    {"k": "emot", "t": {"ru": "Я склонен(на) поддерживать и помогать людям.", "uz": "Men odamlarga yordam berishga moyilman."}, "rev": false},
+    {"k": "emot", "t": {"ru": "Я переживаю за чужие проблемы как за свои.", "uz": "Boshqalarning muammolarini o‘zimnikidek boshdan kechiraman."}, "rev": false},
+    {"k": "emot", "t": {"ru": "Я стараюсь сглаживать споры и конфликты.", "uz": "Men tortishuv va nizolarni yumshatishga harakat qilaman."}, "rev": false},
+    {"k": "schz", "t": {"ru": "Мне нравится работать в одиночку.", "uz": "Men yolg‘iz ishlashni yoqtiraman."}, "rev": false},
+    {"k": "schz", "t": {"ru": "Я предпочитаю размышления общению.", "uz": "Men muloqotdan ko‘ra fikrlashni afzal ko‘raman."}, "rev": false},
+    {"k": "schz", "t": {"ru": "Я легко завожу поверхностные знакомства.", "uz": "Men osonlikcha yuzaki tanishlar orttiraman."}, "rev": true},
+    {"k": "schz", "t": {"ru": "У меня богатое воображение.", "uz": "Mening tasavvurim boy."}, "rev": false},
+    {"k": "schz", "t": {"ru": "Я часто погружаюсь в мир идей.", "uz": "Men ko‘pincha g‘oyalar olamiga sho‘ng‘ib ketaman."}, "rev": false},
+    {"k": "schz", "t": {"ru": "Я иногда теряюсь в размышлениях.", "uz": "Men ba’zida fikrlashga sho‘ng‘ib ketaman."}, "rev": false},
+    {"k": "hyper", "t": {"ru": "Я энергичен(на) и подвижен(на).", "uz": "Men quvnoqman va faolman."}, "rev": false},
+    {"k": "hyper", "t": {"ru": "Я быстро завожу новые знакомства.", "uz": "Men yangi tanishlarni tez orttiraman."}, "rev": false},
+    {"k": "hyper", "t": {"ru": "Я спокойно переношу монотонную работу.", "uz": "Men monoton ishni bemalol bajaraman."}, "rev": true},
+    {"k": "hyper", "t": {"ru": "Мне сложно сидеть без дела.", "uz": "Bekor o‘tirishim qiyin."}, "rev": false},
+    {"k": "hyper", "t": {"ru": "Я люблю динамику и перемены.", "uz": "Men dinamika va o‘zgarishlarni yaxshi ko‘raman."}, "rev": false},
+    {"k": "hyper", "t": {"ru": "Я легко включаюсь в новые проекты.", "uz": "Men yangi loyihalarga tez kirishaman."}, "rev": false},
+    {"k": "anx", "t": {"ru": "Я часто перепроверяю свои действия.", "uz": "Men ko‘pincha ishlarimni qayta tekshiraman."}, "rev": false},
+    {"k": "anx", "t": {"ru": "Мне свойственна осторожность и сомнения.", "uz": "Men ehtiyotkor va shubhalanadiganman."}, "rev": false},
+    {"k": "anx", "t": {"ru": "Я легко принимаю рискованные решения.", "uz": "Men xavfli qarorlarni oson qabul qilaman."}, "rev": true},
+    {"k": "anx", "t": {"ru": "Я часто думаю о возможных ошибках.", "uz": "Men ko‘pincha mumkin bo‘lgan xatolar haqida o‘ylayman."}, "rev": false},
+    {"k": "anx", "t": {"ru": "Я тревожусь даже из-за мелочей.", "uz": "Mayda narsalar uchun ham xavotirlanaman."}, "rev": false},
+    {"k": "anx", "t": {"ru": "Мне сложно расслабиться после работы.", "uz": "Menga ish tugagach dam olish qiyin."}, "rev": false},
+    {"k": "trap", "t": {"ru": "Я иногда встаю позже, чем ложусь спать.", "uz": "Ba'zan men uxlaganimdan kech turaman."}, "rev": false},
+    {"k": "trap", "t": {"ru": "Мне в детстве нравилось есть стекло.", "uz": "Bolaligimda men shisha yemoqchi bo‘lganman."}, "rev": false},
+    {"k": "trap", "t": {"ru": "Я считаю, что Земля – это куб.", "uz": "Yer kub deb hisoblayman."}, "rev": false}
   ],
   "scoring": {
     "hyst": {
