@@ -3,6 +3,7 @@ import os, asyncio, json, io, csv, math, aiosqlite
 from dataclasses import dataclass, field
 from typing import Dict, List, Tuple
 from aiogram import Bot, Dispatcher, F
+from aiogram.client.default import DefaultBotProperties
 from aiogram.filters import Command
 from aiogram.types import (Message, CallbackQuery, ReplyKeyboardMarkup, KeyboardButton,
                            InlineKeyboardMarkup, InlineKeyboardButton, FSInputFile)
@@ -156,7 +157,7 @@ async def save_result(user_id:int, lang:str, skey:str, answers:List[int], scores
         await db.commit()
 
 # === Bot ===
-bot = Bot(TOKEN, parse_mode="Markdown")
+bot = Bot(TOKEN, default=DefaultBotProperties(parse_mode="Markdown"))
 dp = Dispatcher()
 
 @dp.message(Command("start"))
