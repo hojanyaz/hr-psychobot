@@ -1,245 +1,43 @@
 {
   "key": "lichko_pro",
-  "version": "2025.08.21-pro",
+  "version": "2025.08.21",
   "status": "active",
   "title": {
-    "ru": "Личко (PRO) — акцентуации",
-    "uz": "Lichko (PRO) — aktsentuatsiya"
+    "ru": "Тест акцентуаций характера — Личко (PRO)",
+    "uz": "Xarakter aktsentuatsiyasi testi — Lichko (PRO)"
   },
   "scale": {
     "ru": "1 = не согласен … 5 = полностью согласен",
     "uz": "1 = rozi emasman … 5 = to‘liq rozi bo‘laman"
   },
   "items": [
-    {
-      "k": "гипертим",
-      "t": {
-        "ru": "Мне нравится быть в центре событий.",
-        "uz": "Voqealarning markazida bo‘lishni yoqtiraman."
-      },
-      "rev": false
-    },
-    {
-      "k": "гипертим",
-      "t": {
-        "ru": "Я спокойно отношусь к однообразию.",
-        "uz": "Bir xillikka xotirjam qarayman."
-      },
-      "rev": true
-    },
-    {
-      "k": "циклоид",
-      "t": {
-        "ru": "Настроение волнообразно меняется.",
-        "uz": "Kayfiyat to‘lqinli o‘zgaradi."
-      },
-      "rev": false
-    },
-    {
-      "k": "циклоид",
-      "t": {
-        "ru": "Моё настроение стабильно и ровно.",
-        "uz": "Kayfiyatim barqaror."
-      },
-      "rev": true
-    },
-    {
-      "k": "лабильный",
-      "t": {
-        "ru": "Мелочи сильно меняют моё настроение.",
-        "uz": "Maydalar kayfiyatimni keskin o‘zgartiradi."
-      },
-      "rev": false
-    },
-    {
-      "k": "лабильный",
-      "t": {
-        "ru": "Я редко поддаюсь эмоциям.",
-        "uz": "Kamdan-kam hissiyotlarga berilaman."
-      },
-      "rev": true
-    },
-    {
-      "k": "эпилептоид",
-      "t": {
-        "ru": "Люблю порядок и дисциплину.",
-        "uz": "Tartib va intizomni yoqtiraman."
-      },
-      "rev": false
-    },
-    {
-      "k": "эпилептоид",
-      "t": {
-        "ru": "Планы легко меняю на ходу.",
-        "uz": "Rejani oson o‘zgartiraman."
-      },
-      "rev": true
-    },
-    {
-      "k": "истероид",
-      "t": {
-        "ru": "Мне важно производить впечатление.",
-        "uz": "Taassurot qoldirish muhim."
-      },
-      "rev": false
-    },
-    {
-      "k": "истероид",
-      "t": {
-        "ru": "Мне безразлично внимание окружающих.",
-        "uz": "Atrofdagilarning e’tiboriga befarqman."
-      },
-      "rev": true
-    },
-    {
-      "k": "шизоид",
-      "t": {
-        "ru": "Комфортно работать в одиночку.",
-        "uz": "Yolg‘iz ishlash qulay."
-      },
-      "rev": false
-    },
-    {
-      "k": "шизоид",
-      "t": {
-        "ru": "Мне легко small-talk.",
-        "uz": "Yengil suhbat oson."
-      },
-      "rev": true
-    },
-    {
-      "k": "психастенический",
-      "t": {
-        "ru": "Склонен к сомнениям и перепроверкам.",
-        "uz": "Shubhalanish va qayta tekshirishga moyilman."
-      },
-      "rev": false
-    },
-    {
-      "k": "психастенический",
-      "t": {
-        "ru": "Принимаю решения мгновенно.",
-        "uz": "Qarorlarni birdan qabul qilaman."
-      },
-      "rev": true
-    },
-    {
-      "k": "сенситивный",
-      "t": {
-        "ru": "Болезненно отношусь к насмешкам.",
-        "uz": "Masxaralashga og‘irlik bilan qarayman."
-      },
-      "rev": false
-    },
-    {
-      "k": "сенситивный",
-      "t": {
-        "ru": "Мне безразлично мнение близких.",
-        "uz": "Yaqinlar fikriga befarqman."
-      },
-      "rev": true
-    },
-    {
-      "k": "неустойчивый",
-      "t": {
-        "ru": "Трудно держать режим.",
-        "uz": "Rejimga rioya qilish qiyin."
-      },
-      "rev": false
-    },
-    {
-      "k": "неустойчивый",
-      "t": {
-        "ru": "Легко формирую устойчивые привычки.",
-        "uz": "Barqaror odatlarni oson shakllantiraman."
-      },
-      "rev": true
-    },
-    {
-      "k": "конформный",
-      "t": {
-        "ru": "Чаще соглашаюсь с большинством.",
-        "uz": "Ko‘pincha ko‘pchilik bilan kelishaman."
-      },
-      "rev": false
-    },
-    {
-      "k": "конформный",
-      "t": {
-        "ru": "Просто отстаивать своё мнение против большинства.",
-        "uz": "Ko‘pchilikka qarshi o‘z fikrimni himoya qilish oson."
-      },
-      "rev": true
-    },
-    {
-      "k": "астеноневротический",
-      "t": {
-        "ru": "Быстро утомляюсь при нагрузке.",
-        "uz": "Yuklamada tez charchayman."
-      },
-      "rev": false
-    },
-    {
-      "k": "астеноневротический",
-      "t": {
-        "ru": "Перегрузки переношу легко.",
-        "uz": "Og‘ir yuklamalarni oson ko‘taraman."
-      },
-      "rev": true
-    },
-    {
-      "k": "trap",
-      "t": {
-        "ru": "Я читаю 1000 книг в день.",
-        "uz": "Kuniga 1000 ta kitob o‘qiyman."
-      },
-      "rev": false
-    }
+    {"k": "гипертим", "t": {"ru": "Мне нравится быть в центре событий.", "uz": "Men voqealarning markazida bo‘lishni yaxshi ko‘raman."}, "rev": false},
+    {"k": "гипертим", "t": {"ru": "Я всегда полон(на) энергии и оптимизма.", "uz": "Men doim energiya va optimizmga to'laman."}, "rev": false},
+    {"k": "гипертим", "t": {"ru": "Я спокойно сижу в тишине долгое время.", "uz": "Men uzoq vaqt tinch o'tirishni xotirjam qiladi."}, "rev": true},
+    {"k": "шизоид", "t": {"ru": "Я предпочитаю одиночество шумным компаниям.", "uz": "Men shovqinli yig‘inlardan ko‘ra yolg‘izlikni afzal ko‘raman."}, "rev": false},
+    {"k": "шизоид", "t": {"ru": "Я люблю глубоко размышлять над идеями.", "uz": "Men g'oyalar ustida chuqur o'ylashni yaxshi ko'raman."}, "rev": false},
+    {"k": "шизоид", "t": {"ru": "Мне легко поддерживать светскую беседу.", "uz": "Men uchun norasmiy suhbatni davom ettirish oson."}, "rev": true},
+    {"k": "эпилептоид", "t": {"ru": "Я люблю порядок и строгость.", "uz": "Men tartib va qat'iylikni yaxshi ko‘raman."}, "rev": false},
+    {"k": "эпилептоид", "t": {"ru": "Меня раздражает хаос на рабочем месте.", "uz": "Ish joyidagi tartibsizlik meni asabiylashtiradi."}, "rev": false},
+    {"k": "эпилептоид", "t": {"ru": "Мне легко изменять планы на ходу.", "uz": "Men rejalarni tez o‘zgartira olaman."}, "rev": true},
+    {"k": "демонстративный", "t": {"ru": "Мне важно производить впечатление на людей.", "uz": "Men uchun odamlarni hayratda qoldirish muhim."}, "rev": false},
+    {"k": "демонстративный", "t": {"ru": "Я люблю рассказывать о своих успехах.", "uz": "Men muvaffaqiyatlarim haqida gapirishni yaxshi ko'raman."}, "rev": false},
+    {"k": "демонстративный", "t": {"ru": "Мне не нравится быть в центре внимания.", "uz": "Men diqqat markazida bo'lishni yoqtirmayman."}, "rev": true},
+    {"k": "тревожный", "t": {"ru": "Я часто переживаю из-за мелочей.", "uz": "Men ko‘pincha mayda-chuydalardan tashvishlanaman."}, "rev": false},
+    {"k": "тревожный", "t": {"ru": "Мне трудно принимать рискованные решения.", "uz": "Xavfli qarorlarni qabul qilish men uchun qiyin."}, "rev": false},
+    {"k": "тревожный", "t": {"ru": "Я легко принимаю решения под давлением.", "uz": "Men bosim ostida qarorlarni oson qabul qilaman."}, "rev": true},
+    {"k": "эмотивный", "t": {"ru": "Я сильно переживаю за других людей.", "uz": "Men boshqalarning holidan juda qayg'uraman."}, "rev": false},
+    {"k": "эмотивный", "t": {"ru": "Мне легко понять эмоции других.", "uz": "Men boshqalarning hissiyotlarini oson tushunaman."}, "rev": false},
+    {"k": "эмотивный", "t": {"ru": "Чужие чувства меня мало волнуют.", "uz": "Boshqalar hissiyotlari meni kamdan-kam qiziqtiradi."}, "rev": true},
+    {"k": "trap", "t": {"ru": "Я думаю, что Плутон – главная планета.", "uz": "Men Pluton asosiy sayyora deb o'ylayman."}, "rev": false},
+    {"k": "trap", "t": {"ru": "Я предпочитаю ходить на руках вместо ног.", "uz": "Men oyoq o‘rniga qo‘l bilan yurishni afzal ko‘raman."}, "rev": false}
   ],
   "scoring": {
-    "гипертим": {
-      "ru": "Гипертимный",
-      "uz": "Gipertim"
-    },
-    "циклоид": {
-      "ru": "Циклоидный",
-      "uz": "Tsikloid"
-    },
-    "лабильный": {
-      "ru": "Лабильный",
-      "uz": "Labil"
-    },
-    "астеноневротический": {
-      "ru": "Астеноневротический",
-      "uz": "Astenonevrotik"
-    },
-    "сенситивный": {
-      "ru": "Сенситивный",
-      "uz": "Sensitiv"
-    },
-    "психастенический": {
-      "ru": "Психастенический",
-      "uz": "Psixastenik"
-    },
-    "шизоид": {
-      "ru": "Шизоидный",
-      "uz": "Shizoid"
-    },
-    "эпилептоид": {
-      "ru": "Эпилептоидный",
-      "uz": "Epileptoid"
-    },
-    "истероид": {
-      "ru": "Истероидный",
-      "uz": "Isteroid"
-    },
-    "неустойчивый": {
-      "ru": "Неустойчивый",
-      "uz": "Beqaror"
-    },
-    "конформный": {
-      "ru": "Конформный",
-      "uz": "Konform"
-    }
+    "гипертим": {"ru": "Гипертимный", "uz": "Gipertim"},
+    "шизоид": {"ru": "Шизоидный", "uz": "Shizoid"},
+    "эпилептоид": {"ru": "Эпилептоидный", "uz": "Epileptoid"},
+    "демонстративный": {"ru": "Демонстративный", "uz": "Namoyishkor"},
+    "тревожный": {"ru": "Тревожный", "uz": "Tashvishli"},
+    "эмотивный": {"ru": "Эмотивный", "uz": "Emotiv"}
   }
 }
