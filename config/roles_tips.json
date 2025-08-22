@@ -1,0 +1,61 @@
+{
+  "roles": ["Sales", "Logistics", "Finance", "R&D", "HR", "Manager"],
+  "psycho7_pro": {
+    "hyst": {
+      "Sales": {"ru":"Используйте сцену и сторителлинг в питче.","uz":"Pitchda sahna va storytellingdan foydalaning."},
+      "Logistics": {"ru":"Будьте яркими, но фиксируйте SLA/сроки.","uz":"Yorqin bo‘ling, lekin SLA/muddatlarni yozing."},
+      "Finance": {"ru":"Подчёркивайте цифры и факты.","uz":"Raqamlar va faktlarni ko‘rsating."},
+      "R&D": {"ru":"Демонстрируйте ценность идей на демо.","uz":"Demo’da g‘oya qiymatini ko‘rsating."},
+      "HR": {"ru":"Используйте силу бренда и культуру.","uz":"Brend va madaniyat kuchidan foydalaning."},
+      "Manager": {"ru":"Хвалите публично, KPI — приватно.","uz":"Ochiq maqtov, KPI — shaxsiy."}
+    },
+    "epil": {
+      "Sales": {"ru":"Скрипт + чек-лист контакта.","uz":"Skript + kontakt chek-listi."},
+      "Logistics": {"ru":"Вы — владелец процесса и качества.","uz":"Siz jarayon va sifat egasisiz."},
+      "Finance": {"ru":"Контроль ввода и сверки.","uz":"Kiritish va solishtirish nazorati."},
+      "R&D": {"ru":"Регламент экспериментов и версий.","uz":"Eksperiment va versiya reglamenti."},
+      "HR": {"ru":"Политики, процедуры, комплаенс.","uz":"Siyosat, protsedura, muvofiqlik."},
+      "Manager": {"ru":"Планируйте буферы на изменения.","uz":"O‘zgarishlar uchun buffer qo‘ying."}
+    },
+    "para": {
+      "Sales": {"ru":"Цели по воронке + автономия.","uz":"Voronka maqsadlari + avtonomiya."},
+      "Logistics": {"ru":"Дедлайны и ответственность персонально.","uz":"Muddat va javobgarlik shaxsiy."},
+      "Finance": {"ru":"Фокус на результат и сроки.","uz":"Natija va muddatga fokus."},
+      "R&D": {"ru":"OKR по продукту, не микроконтроль.","uz":"Mahsulot OKR, mikroboshqaruv yo‘q."},
+      "HR": {"ru":"Доводите инициативы до конца.","uz":"Tashabbuslarni oxiriga yetkazing."},
+      "Manager": {"ru":"Согласуйте KPI и границы влияния.","uz":"KPI va ta’sir chegarasini kelishing."}
+    },
+    "emot": {
+      "Sales": {"ru":"Стройте доверие и послепродажный care.","uz":"Ishonch va sotuvdan keyin care."},
+      "Logistics": {"ru":"Смягчайте конфликты с контрагентами.","uz":"Konfliktlarni yumshating."},
+      "Finance": {"ru":"Клиентский тон при взысканиях.","uz":"Undirishda mijozona ohang."},
+      "R&D": {"ru":"Юзер-интервью и саппорт.","uz":"Foydalanuvchi intervyu va support."},
+      "HR": {"ru":"Онбординг и wellbeing.","uz":"Onboarding va wellbeing."},
+      "Manager": {"ru":"Поддержка 1:1, чёткие рамки.","uz":"1:1 qo‘llab, aniq qoidalar."}
+    },
+    "schz": {
+      "Sales": {"ru":"Готовьте тезисы + помощник на встрече.","uz":"Tezis + yordamchi bering."},
+      "Logistics": {"ru":"Сложные схемы — письменно.","uz":"Murakkab sxemalar — yozma."},
+      "Finance": {"ru":"Аналитика и модели.","uz":"Analitika va modellar."},
+      "R&D": {"ru":"Глубокие исследования и прототипы.","uz":"Chuqur tadqiq va prototiplar."},
+      "HR": {"ru":"Аналитика опросов и дэшбордов.","uz":"So‘rov/board analitikasi."},
+      "Manager": {"ru":"Презентации совместно с фасилитатором.","uz":"Fasilitator bilan taqdimot."}
+    },
+    "hyper": {
+      "Sales": {"ru":"Чаще встречи и демо.","uz":"Ko‘proq uchrashuv va demo."},
+      "Logistics": {"ru":"Чек-листы и контроль точек.","uz":"Chek-list va nazorat nuqtalari."},
+      "Finance": {"ru":"Бюджет + дедлайны видны всегда.","uz":"Byudjet va deadline doim ko‘rinsin."},
+      "R&D": {"ru":"Короткие спринты, частые ревью.","uz":"Qisqa sprint, tez-tez review."},
+      "HR": {"ru":"Эвенты, вовлечение команды.","uz":"Event va jamoani jalb qilish."},
+      "Manager": {"ru":"Давайте фронтовые роли и сроки.","uz":"Old rollar va muddatlar bering."}
+    },
+    "anx": {
+      "Sales": {"ru":"Скрипты и готовые шаблоны.","uz":"Skriptlar va shablonlar."},
+      "Logistics": {"ru":"QA документов и отгрузок.","uz":"Hujjat/jo‘natma QA."},
+      "Finance": {"ru":"Сверки, контроль рисков.","uz":"Solishtirish, risk nazorati."},
+      "R&D": {"ru":"Тест-кейсы и документация.","uz":"Test-case va dokumentatsiya."},
+      "HR": {"ru":"Точность в кадрах/договорах.","uz":"Kadrlarda aniqlik."},
+      "Manager": {"ru":"Меньше переключений, чёткие задачи.","uz":"Kam kontekst, aniq vazifalar."}
+    }
+  }
+}
