@@ -1,0 +1,88 @@
+{
+  "psycho7_pro": {
+    "hyst": {
+      "ru": {
+        "strengths": "харизма, убедительная подача, вдохновляет людей",
+        "risks": "нуждается в признании, склонность к драматизации",
+        "tips": "давайте роли презентаций/PR; фиксируйте KPI процесса, а не лайки"
+      },
+      "uz": {
+        "strengths": "karizma, ta’sirli taqdimot, boshqalarni ruhlantiradi",
+        "risks": "e’tirofga ehtiyoj, dramatizatsiya",
+        "tips": "taqdimot/PR rollari bering; jarayon KPI bilan boshqaring"
+      }
+    },
+    "epil": {
+      "ru": {
+        "strengths": "системность, дисциплина, контроль качества",
+        "risks": "жёсткость, низкая гибкость",
+        "tips": "делайте владельцем процесса; заранее согласуйте окна для изменений"
+      },
+      "uz": {
+        "strengths": "tizimlilik, intizom, sifat nazorati",
+        "risks": "qattiqqo‘llik, moslashuv past",
+        "tips": "jarayon egasi qiling; o‘zgarishlar uchun vaqt oynasi belgilang"
+      }
+    },
+    "para": {
+      "ru": {
+        "strengths": "целеустремлённость, лидерство, стратегия",
+        "risks": "туннельное видение, микроменеджмент",
+        "tips": "согласуйте KPI и зоны автономии; ставьте амбициозные, измеримые цели"
+      },
+      "uz": {
+        "strengths": "maqsadga intilish, liderlik, strategik fikrlash",
+        "risks": "tor qarash, mikroboshqaruv",
+        "tips": "KPI va avtonomiya zonalarini kelishing; o‘lchanadigan maqsadlar qo‘ying"
+      }
+    },
+    "emot": {
+      "ru": {
+        "strengths": "эмпатия, поддержка, командная атмосфера",
+        "risks": "ранимость, избегание жёстких решений",
+        "tips": "давайте наставничество/HR; в конфликтах задавайте чёткие рамки"
+      },
+      "uz": {
+        "strengths": "empatiya, qo‘llab-quvvatlash, jamoa muhiti",
+        "risks": "ta’sirchanlik, qattiq qarorlardan qochish",
+        "tips": "murabbiylik/HR rollari; nizolarda aniq qoidalar"
+      }
+    },
+    "schz": {
+      "ru": {
+        "strengths": "глубина мышления, оригинальные идеи",
+        "risks": "низкая коммуникация, отстранённость",
+        "tips": "исследования/аналитика; дайте фасилитатора для презентаций"
+      },
+      "uz": {
+        "strengths": "chuqur fikrlash, original g‘oyalar",
+        "risks": "muloqot sust, chetlanish",
+        "tips": "tadqiqot/analitika; taqdimotlarga fasilitator qo‘shing"
+      }
+    },
+    "hyper": {
+      "ru": {
+        "strengths": "энергия, общительность, быстрые контакты",
+        "risks": "импульсивность, недисциплинированность",
+        "tips": "давайте фронтовые роли; используйте чек-листы и дедлайны"
+      },
+      "uz": {
+        "strengths": "energiya, kirishimlilik, tez aloqa",
+        "risks": "impulsivlik, intizomda qiyinchilik",
+        "tips": "old chiziq rollari; chek-list va deadline bilan boshqaring"
+      }
+    },
+    "anx": {
+      "ru": {
+        "strengths": "внимательность к деталям, аккуратность, надёжность",
+        "risks": "перепроверки, замедление, стресс",
+        "tips": "качество/учёт; защищайте от частых переключений"
+      },
+      "uz": {
+        "strengths": "detallarga e’tibor, aniqlik, ishonchlilik",
+        "risks": "ortiqcha tekshirish, sekinlashish, stress",
+        "tips": "sifat nazorati/hisob; ko‘p kontekst almashuvdan himoya qiling"
+      }
+    }
+  }
+}
