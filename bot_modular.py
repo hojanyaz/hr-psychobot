@@ -48,6 +48,23 @@ dp = Dispatcher()
 SURVEYS: Dict[str, dict] = {}
 user_lang: Dict[int, str] = {}
 sessions: Dict[int, "Session"] = {}
+# --- optional configs: interpretations & role tips
+INTERP: Dict[str, dict] = {}
+ROLE_TIPS: Dict[str, dict] = {}
+
+def load_config():
+    """Load optional interpretations and role tips if present."""
+    global INTERP, ROLE_TIPS
+    try:
+        with open(os.path.join("config", "interpretations.json"), "r", encoding="utf-8") as f:
+            INTERP = json.load(f)
+    except Exception:
+        INTERP = {}
+    try:
+        with open(os.path.join("config", "roles_tips.json"), "r", encoding="utf-8") as f:
+            ROLE_TIPS = json.load(f)
+    except Exception:
+        ROLE_TIPS = {}
 
 # ============ MODELS ============
 @dataclass
@@ -76,8 +93,18 @@ def load_surveys(dir_path: Optional[str] = None):
         except: continue
 
 load_surveys(SURVEY_DIR)
+load_config()
+
 
 # ============ TEXTS ============
+@dp.message(Command("reload"))
+async def reload_cmd(m: Message):
+    if m.from_user.id not in ADMIN_IDS: return
+    load_surveys(SURVEY_DIR)
+    # add below:
+    load_config()
+    await m.answer("Surveys reloaded.")
+
 HELP_TEXT = {
     "ru": "ℹ️ Помощь\n/start — начать\n/reload — перезагрузить тесты (админ)\n/export — экспорт CSV (админ)\n/stats — статистика (админ)",
     "uz": "ℹ️ Yordam\n/start — boshlash\n/reload — testlarni qayta yuklash (admin)\n/export — CSV eksport (admin)\n/stats — statistika (admin)"
