@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Survey file",
+  "type": "object",
+  "required": ["key", "version", "status", "title", "scoring", "items"],
+  "properties": {
+    "key": {"type": "string"},
+    "version": {"type": "string"},
+    "status": {"type": "string", "enum": ["active", "draft"]},
+    "title": {
+      "type": "object",
+      "required": ["ru", "uz"],
+      "properties": {"ru": {"type": "string"}, "uz": {"type": "string"}}
+    },
+    "scoring": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["ru", "uz"],
+        "properties": {"ru": {"type": "string"}, "uz": {"type": "string"}}
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["k", "t"],
+        "properties": {
+          "k": {"type": "string"},
+          "rev": {"type": "boolean"},
+          "t": {
+            "type": "object",
+            "required": ["ru", "uz"],
+            "properties": {"ru": {"type": "string"}, "uz": {"type": "string"}}
+          }
+        }
+      },
+      "minItems": 3
+    }
+  }
+}
