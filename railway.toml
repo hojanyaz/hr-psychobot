@@ -1,5 +1,11 @@
-[build]
-builder = "NIXPACKS"
+[phases.setup]
+nixPkgs = ["python311"]
 
-[deploy]
-startCommand = "python bot_modular.py"
+[phases.install]
+cmds = [
+  "python -m pip install --upgrade pip setuptools wheel",
+  "pip install -r requirements.txt"
+]
+
+[phases.start]
+cmd = "python bot_modular.py"
