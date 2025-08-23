@@ -53,18 +53,9 @@ INTERP: Dict[str, dict] = {}
 ROLE_TIPS: Dict[str, dict] = {}
 
 def load_config():
-    """Load optional interpretations and role tips if present."""
     global INTERP, ROLE_TIPS
-    try:
-        with open(os.path.join("config", "interpretations.json"), "r", encoding="utf-8") as f:
-            INTERP = json.load(f)
-    except Exception:
-        INTERP = {}
-    try:
-        with open(os.path.join("config", "roles_tips.json"), "r", encoding="utf-8") as f:
-            ROLE_TIPS = json.load(f)
-    except Exception:
-        ROLE_TIPS = {}
+    INTERP = load_json("config/interpretations.json")
+    ROLE_TIPS = load_json("config/roles_tips.json")
 
 # ============ MODELS ============
 @dataclass
