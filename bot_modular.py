@@ -20,7 +20,7 @@ from aiogram.types import (
 
 # ========= ENV & GLOBALS =========
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
-ADMIN_IDS = set(int(x) for x in os.getenv("ADMIN_IDS","" ).split(",") if x.strip().isdigit())
+ADMIN_IDS = set(int(x) for x in os.getenv("ADMIN_IDS","").split(",") if x.strip().isdigit())
 DB_PATH = os.getenv("DB_PATH", "data.sqlite")
 SURVEY_DIR = os.getenv("SURVEY_DIR", "surveys_pro")
 MIN_SEC_PER_ITEM = float(os.getenv("MIN_SEC_PER_ITEM", "1.5"))
@@ -32,11 +32,11 @@ bot = Bot(TOKEN, default=DefaultBotProperties(parse_mode="Markdown"))
 dp = Dispatcher()
 
 SURVEYS: Dict[str, dict] = {}
-INTERP: Dict[str, dict] = {}
-ROLE_TIPS: Dict[str, dict] = {}
+INTERP: Dict[str, dict] = {}       # config/interpretations.json
+ROLE_TIPS: Dict[str, dict] = {}    # config/roles_tips.json
 user_lang: Dict[int, str] = {}
 sessions: Dict[int, "Session"] = {}
-LAST_RESULT: Dict[int, dict] = {}
+LAST_RESULT: Dict[int, dict] = {}  # for “More details”
 
 @dataclass
 class Session:
@@ -48,7 +48,7 @@ class Session:
     order: List[int] = field(default_factory=list)
     started_at: float = 0.0
 
-# ========= LOADING =========
+# ========= LOADERS =========
 def load_surveys(dir_path: Optional[str] = None):
     SURVEYS.clear()
     path = dir_path or SURVEY_DIR
@@ -81,7 +81,7 @@ def load_config():
 load_surveys(SURVEY_DIR)
 load_config()
 
-# ========= DB HELPERS =========
+# ========= DB =========
 async def ensure_db():
     async with aiosqlite.connect(DB_PATH) as db:
         await db.execute("""CREATE TABLE IF NOT EXISTS users(
@@ -101,13 +101,17 @@ async def ensure_db():
 
 async def set_user_lang(uid:int, lang:str):
     async with aiosqlite.connect(DB_PATH) as db:
-        await db.execute("INSERT INTO users(user_id,lang,role) VALUES(?,?,COALESCE((SELECT role FROM users WHERE user_id=?),NULL)) ON CONFLICT(user_id) DO UPDATE SET lang=excluded.lang",
+        await db.execute("""INSERT INTO users(user_id,lang,role)
+                            VALUES(?,?,COALESCE((SELECT role FROM users WHERE user_id=?),NULL))
+                            ON CONFLICT(user_id) DO UPDATE SET lang=excluded.lang""",
                          (uid, lang, uid))
         await db.commit()
 
 async def set_user_role(uid:int, role:str):
     async with aiosqlite.connect(DB_PATH) as db:
-        await db.execute("INSERT INTO users(user_id,role,lang) VALUES(?,?,COALESCE((SELECT lang FROM users WHERE user_id=?),'ru')) ON CONFLICT(user_id) DO UPDATE SET role=excluded.role",
+        await db.execute("""INSERT INTO users(user_id,role,lang)
+                            VALUES(?,?,COALESCE((SELECT lang FROM users WHERE user_id=?),'ru'))
+                            ON CONFLICT(user_id) DO UPDATE SET role=excluded.role""",
                          (uid, role, uid))
         await db.commit()
 
@@ -121,7 +125,7 @@ async def get_user_role(uid:int) -> Optional[str]:
 def is_admin(uid): return uid in ADMIN_IDS
 def get_lang(uid): return user_lang.get(uid, "ru")
 
-def home_kb(lang, admin=False):
+def home_kb(lang, admin: bool=False):
     kb = [
         [KeyboardButton(text="📋 Пройти тесты" if lang=="ru" else "📋 Testlarni o‘tish"),
          KeyboardButton(text="🧭 Продолжить" if lang=="ru" else "🧭 Davom ettirish")],
@@ -136,58 +140,11 @@ def home_kb(lang, admin=False):
 
 def likert_kb(lang):
     row = [InlineKeyboardButton(text=str(i), callback_data=f"ans:{i}") for i in range(1,6)]
-    return InlineKeyboardMarkup(inline_keyboard=[row,
-        [InlineKeyboardButton(text="🔙 Назад" if lang=="ru" else "🔙 Orqaga", callback_data="back")],
-        [InlineKeyboardButton(text="🏠 В меню" if lang=="ru" else "🏠 Menyuga", callback_data="home")]
+    return InlineKeyboardMarkup(inline_keyboard=[
+        row,
+        [InlineKeyboardButton(text=("🔙 Назад" if lang=="ru" else "🔙 Orqaga"), callback_data="back")],
+        [InlineKeyboardButton(text=("🏠 В меню" if lang=="ru" else "🏠 Menyuga"), callback_data="home")]
     ])
-
-# ========= SCORING & VALIDITY =========
-def reorder_answers(sdef, ans, order):
-    total = len(sdef["items"]); ordered = [0]*total
-    for i,v in enumerate(ans):
-        if i < len(order): ordered[order[i]] = v
-    return ordered
-
-def score_survey(skey, ordered):
-    sdef = SURVEYS[skey]; buckets = {}
-    for ans, item in zip(ordered, sdef["items"]):
-        if item.get("k") == "trap": continue
-        val = 6 - ans if item.get("rev") else ans
-        k = item["k"]
-        buckets[k] = buckets.get(k,0) + val
-    for k in buckets:
-        denom = len([i for i in sdef["items"] if i["k"]==k]) or 1
-        buckets[k] = round(buckets[k]/denom, 2)
-    top = sorted(buckets.items(), key=lambda x: x[1], reverse=True)[:3]
-    return buckets, top
-
-def compute_validity(sess:Session, ordered):
-    sdef = SURVEYS[sess.survey_key]
-    traps = sum(1 for a,i in zip(sess.answers, sess.order)
-                if sdef["items"][i].get("k")=="trap" and a>=4)
-    elapsed = time.time()-sess.started_at
-    too_fast = elapsed < len(sdef["items"]) * MIN_SEC_PER_ITEM
-    var = 0 if len(sess.answers)<2 else sum(
-        (x-(sum(sess.answers)/len(sess.answers)))**2 for x in sess.answers
-    )/len(sess.answers)
-    straight = var < STRAIGHT_LINING_VAR
-    return {"trap": traps>0, "too_fast": too_fast, "straight": straight, "duration": round(elapsed,2)}
-
-# ========= TEXTS =========
-HELP_TEXT = {
-    "ru": "ℹ️ Помощь
-/start — начать
-/reload — перезагрузить тесты (админ)
-/export — экспорт CSV (админ)
-/stats — статистика (админ)
-/role — выбрать роль (Sales/Logistics/Finance/R&D/HR/Manager)",
-    "uz": "ℹ️ Yordam
-/start — boshlash
-/reload — testlarni qayta yuklash (admin)
-/export — CSV eksport (admin)
-/stats — statistika (admin)
-/role — rol tanlash (Sales/Logistics/Finance/R&D/HR/Manager)"
-}
 
 # ========= BUILDERS =========
 def build_short_summary(lang:str, sdef:dict, scores:dict, top:list)->str:
@@ -195,8 +152,7 @@ def build_short_summary(lang:str, sdef:dict, scores:dict, top:list)->str:
     lines = [f"📊 {sdef['title'][lang]}"]
     for k,v in top: lines.append(f"• {labels[k][lang]}: {v}/5")
     lines.append("🔎 Подробнее" if lang=="ru" else "🔎 Batafsil")
-    return "
-".join(lines)
+    return "\n".join(lines)
 
 def build_role_overlay(lang:str, skey:str, top:list, role:Optional[str])->str:
     if not role: return ""
@@ -209,9 +165,7 @@ def build_role_overlay(lang:str, skey:str, top:list, role:Optional[str])->str:
             out.append(f"— {r.get('ru') if lang=='ru' else r.get('uz')}")
     if out:
         header = "💼 Роль — " if lang=="ru" else "💼 Rol — "
-        return header + role + ":
-" + "
-".join(out)
+        return header + role + ":\n" + "\n".join(out)
     return ""
 
 def build_detailed(lang:str, skey:str, scores:dict, top:list, validity:dict, role:Optional[str])->str:
@@ -219,33 +173,66 @@ def build_detailed(lang:str, skey:str, scores:dict, top:list, validity:dict, rol
     lines = [f"📊 {sdef['title'][lang]}"]
     for k,v in scores.items():
         lines.append(f"• {labels[k][lang]}: {v}/5")
+    # interpretations
     block = []
     for k,_ in top:
         t = INTERP.get(skey,{}).get(k,{}).get(lang,{})
         if t:
             block.append(
-                f"
-*{labels[k][lang]}*
-"
-                f"— {t.get('strengths','')}
-"
-                f"— {t.get('risks','')}
-"
+                f"\n*{labels[k][lang]}*\n"
+                f"— {t.get('strengths','')}\n"
+                f"— {t.get('risks','')}\n"
                 f"— {t.get('tips','')}"
             )
-    if block: lines.append("
-".join(block))
+    if block: lines.append("\n".join(block))
+    # role overlay
     overlay = build_role_overlay(lang, skey, top, role)
-    if overlay: lines.append("
-" + overlay)
+    if overlay: lines.append("\n" + overlay)
+    # validity flags
     if validity.get("trap") or validity.get("too_fast") or validity.get("straight"):
         lines.append("⚠️ Проверка валидности" if lang=="ru" else "⚠️ Validlik tekshiruvi")
-    return "
-".join(lines)
+    return "\n".join(lines)
+
+# ========= CORE LOGIC =========
+def reorder_answers(sdef, ans, order):
+    total = len(sdef["items"]); ordered = [0]*total
+    for i,v in enumerate(ans):
+        if i < len(order): ordered[order[i]] = v
+    return ordered
+
+def score_survey(skey, ordered):
+    sdef = SURVEYS[skey]; buckets = {}
+    for ans,item in zip(ordered, sdef["items"]):
+        if item.get("k") == "trap": continue
+        val = 6 - ans if item.get("rev") else ans
+        k = item["k"]; buckets[k] = buckets.get(k,0) + val
+    for k in buckets:
+        denom = len([i for i in sdef["items"] if i["k"]==k]) or 1
+        buckets[k] = round(buckets[k]/denom, 2)
+    top = sorted(buckets.items(), key=lambda x: x[1], reverse=True)[:3]
+    return buckets, top
+
+def compute_validity(sess:Session, ordered):
+    sdef = SURVEYS[sess.survey_key]
+    traps = sum(1 for a,i in zip(sess.answers, sess.order)
+                if sdef["items"][i].get("k")=="trap" and a>=4)
+    elapsed = time.time() - sess.started_at
+    too_fast = elapsed < len(sdef["items"]) * MIN_SEC_PER_ITEM
+    var = 0 if len(sess.answers)<2 else sum(
+        (x-(sum(sess.answers)/len(sess.answers)))**2 for x in sess.answers
+    )/len(sess.answers)
+    straight = var < STRAIGHT_LINING_VAR
+    return {"trap": traps>0, "too_fast": too_fast, "straight": straight, "duration": round(elapsed,2)}
+
+# ========= TEXTS =========
+HELP_TEXT = {
+    "ru": "ℹ️ Помощь\n/start — начать\n/reload — перезагрузить тесты (админ)\n/export — экспорт CSV (админ)\n/stats — статистика (админ)\n/role — выбрать роль (Sales/Logistics/Finance/R&D/HR/Manager)\n/menu — показать меню",
+    "uz": "ℹ️ Yordam\n/start — boshlash\n/reload — testlarni qayta yuklash (admin)\n/export — CSV eksport (admin)\n/stats — statistika (admin)\n/role — rol tanlash\n/menu — menyuni ko‘rsatish"
+}
 
 # ========= COMMANDS =========
 @dp.message(Command("start"))
-async def start(m:Message):
+async def cmd_start(m:Message):
     await ensure_db()
     await m.answer("Выберите язык / Tilni tanlang",
         reply_markup=ReplyKeyboardMarkup(
@@ -255,13 +242,17 @@ async def start(m:Message):
 @dp.message(F.text=="Русский")
 async def set_ru(m:Message):
     user_lang[m.from_user.id] = "ru"
-    await set_user_lang(m.from_user.id, "ru")
+    async with aiosqlite.connect(DB_PATH) as db:
+        await db.execute("INSERT INTO users(user_id,lang) VALUES(?,?) ON CONFLICT(user_id) DO UPDATE SET lang='ru'", (m.from_user.id,"ru"))
+        await db.commit()
     await m.answer("Готово", reply_markup=home_kb("ru", is_admin(m.from_user.id)))
 
 @dp.message(F.text=="O‘zbekcha")
 async def set_uz(m:Message):
     user_lang[m.from_user.id] = "uz"
-    await set_user_lang(m.from_user.id, "uz")
+    async with aiosqlite.connect(DB_PATH) as db:
+        await db.execute("INSERT INTO users(user_id,lang) VALUES(?,?) ON CONFLICT(user_id) DO UPDATE SET lang='uz'", (m.from_user.id,"uz"))
+        await db.commit()
     await m.answer("Tayyor", reply_markup=home_kb("uz", is_admin(m.from_user.id)))
 
 @dp.message(F.text=="🌐 Язык / Til")
@@ -269,10 +260,16 @@ async def toggle_lang(m:Message):
     cur = get_lang(m.from_user.id)
     new = "uz" if cur=="ru" else "ru"
     user_lang[m.from_user.id] = new
-    await set_user_lang(m.from_user.id, new)
     await m.answer("Язык переключен." if new=="ru" else "Til almashtirildi.",
                    reply_markup=home_kb(new, is_admin(m.from_user.id)))
 
+@dp.message(Command("menu"))
+async def cmd_menu(m:Message):
+    lang = get_lang(m.from_user.id)
+    await m.answer("Меню" if lang=="ru" else "Menyu",
+                   reply_markup=home_kb(lang, is_admin(m.from_user.id)))
+
+# role picker
 @dp.message(Command("role"))
 async def pick_role(m:Message):
     lang = get_lang(m.from_user.id)
@@ -280,7 +277,8 @@ async def pick_role(m:Message):
     buttons = [[InlineKeyboardButton(text=r, callback_data=f"role:{r}")] for r in roles]
     buttons.append([InlineKeyboardButton(text=("🏠 В меню" if lang=="ru" else "🏠 Menyuga"), callback_data="home")])
     kb = InlineKeyboardMarkup(inline_keyboard=buttons)
-    await m.answer("Выберите вашу роль:" if lang=="ru" else "Rolingizni tanlang:", reply_markup=kb)
+    await m.answer("Выберите вашу роль:" if lang=="ru" else "Rolingizni tanlang:",
+                   reply_markup=kb)
 
 @dp.callback_query(F.data.startswith("role:"))
 async def set_role_cb(c:CallbackQuery):
@@ -289,19 +287,21 @@ async def set_role_cb(c:CallbackQuery):
     lang = get_lang(c.from_user.id)
     await c.answer("Роль сохранена" if lang=="ru" else "Rol saqlandi", show_alert=True)
 
-# list tests
+# list tests (always includes Home row)
 @dp.message(F.text.in_(["📋 Пройти тесты","📋 Testlarni o‘tish"]))
 async def list_tests(m:Message):
     lang = get_lang(m.from_user.id)
     if not SURVEYS:
-        return await m.answer("Нет тестов" if lang=="ru" else "Testlar yo‘q", reply_markup=home_kb(lang, is_admin(m.from_user.id)))
+        return await m.answer("Нет тестов" if lang=="ru" else "Testlar yo‘q",
+                              reply_markup=home_kb(lang, is_admin(m.from_user.id)))
     rows = [[KeyboardButton(text=s["title"][lang])] for s in SURVEYS.values()]
     rows.append([KeyboardButton(text=("🏠 В меню" if lang=="ru" else "🏠 Menyuga"))])
     await m.answer("Выберите тест:" if lang=="ru" else "Testni tanlang:",
                    reply_markup=ReplyKeyboardMarkup(keyboard=rows, resize_keyboard=True))
 
 # pick test by title
-@dp.message(F.text.in_([*(s["title"]["ru"] for s in SURVEYS.values()), *(s["title"]["uz"] for s in SURVEYS.values())]))
+@dp.message(F.text.in_([*(s["title"]["ru"] for s in SURVEYS.values()),
+                        *(s["title"]["uz"] for s in SURVEYS.values())]))
 async def pick_test(m:Message):
     lang = get_lang(m.from_user.id)
     skey = [k for k,v in SURVEYS.items() if v["title"][lang]==m.text]
@@ -309,12 +309,8 @@ async def pick_test(m:Message):
     s = Session(m.from_user.id, skey[0], lang, 0, [], list(range(len(SURVEYS[skey[0]]["items"]))), time.time())
     random.shuffle(s.order)
     sessions[m.from_user.id] = s
-    await m.answer("⚖️ Дисклеймер
-
-Это самооценочный опрос, не диагноз. Можно пройти анонимно." if lang=="ru" else
-                   "⚖️ Ogohlantirish
-
-Bu o‘z-o‘zini baholash, tashxis emas. Anonim o‘tish mumkin.",
+    await m.answer("⚖️ Дисклеймер\n\nЭто самооценочный опрос, не диагноз. Можно пройти анонимно." if lang=="ru" else
+                   "⚖️ Ogohlantirish\n\nBu o‘z-o‘zini baholash, tashxis emas. Anonim o‘tish mumkin.",
                    reply_markup=InlineKeyboardMarkup(inline_keyboard=[
                        [InlineKeyboardButton(text="✅ OK", callback_data="agree")],
                        [InlineKeyboardButton(text=("🏠 В меню" if lang=="ru" else "🏠 Menyuga"), callback_data="home")]
@@ -334,6 +330,7 @@ async def ask_next(chat_id, uid:int):
         scores, top = score_survey(s.survey_key, ordered)
         validity = compute_validity(s, ordered)
         await save_result(uid, lang, s.survey_key, scores, validity)
+
         short_txt = build_short_summary(lang, sdef, scores, top)
         kb = InlineKeyboardMarkup(inline_keyboard=[
             [InlineKeyboardButton(text=("🔎 Подробнее" if lang=="ru" else "🔎 Batafsil"), callback_data="more")],
@@ -345,9 +342,9 @@ async def ask_next(chat_id, uid:int):
         await clear_progress(uid); sessions.pop(uid, None); return
 
     idx = s.order[s.idx]
-    q_text = sdef["items"][idx]["t"][lang]
-    await bot.send_message(chat_id, f"{s.idx+1}/{total}
-" + q_text, reply_markup=likert_kb(lang))
+    await bot.send_message(chat_id,
+                           f"{s.idx+1}/{total}\n" + sdef["items"][idx]["t"][lang],
+                           reply_markup=likert_kb(lang))
 
 @dp.callback_query(F.data=="more")
 async def more_details(c:CallbackQuery):
@@ -358,9 +355,11 @@ async def more_details(c:CallbackQuery):
     role = await get_user_role(c.from_user.id)
     detailed = build_detailed(lang, data["skey"], data["scores"], data["top"], data["validity"], role)
     await c.message.answer(detailed)
+
+    # chart
     sdef = SURVEYS[data["skey"]]
     chart_path = f"profile_{c.from_user.id}_{int(time.time())}.png"
-    labels = [sdef["scoring"][k]['ru'] for k in data["scores"].keys()]
+    labels = [sdef["scoring"][k]['ru'] for k in data["scores"].keys()]   # short RU labels
     values = list(data["scores"].values())
     if labels and values:
         angles = [n/float(len(labels))*2*math.pi for n in range(len(labels))]
@@ -370,7 +369,8 @@ async def more_details(c:CallbackQuery):
         ax.set_yticklabels([]); ax.plot(angles2, values2); ax.fill(angles2, values2, alpha=0.1)
         ax.set_title("Профиль (1–5)", fontsize=11)
         fig.savefig(chart_path, bbox_inches="tight"); plt.close(fig)
-        await bot.send_photo(c.message.chat.id, photo=FSInputFile(chart_path), caption=("График профиля" if lang=="ru" else "Profil grafigi"))
+        await bot.send_photo(c.message.chat.id, photo=FSInputFile(chart_path),
+                             caption=("График профиля" if lang=="ru" else "Profil grafigi"))
     await c.answer()
 
 # continue unfinished
@@ -379,7 +379,7 @@ async def cont(m:Message):
     sess = await get_progress(m.from_user.id)
     if not sess:
         return await m.answer("Нет незавершённых" if get_lang(m.from_user.id)=="ru" else "Tugallanmagan test yo‘q",
-                               reply_markup=home_kb(get_lang(m.from_user.id), is_admin(m.from_user.id)))
+                              reply_markup=home_kb(get_lang(m.from_user.id), is_admin(m.from_user.id)))
     sessions[m.from_user.id] = sess
     await ask_next(m.chat.id, m.from_user.id)
 
@@ -393,7 +393,7 @@ async def my_results(m:Message):
         row = await cur.fetchone()
     if not row:
         return await m.answer("Нет результатов" if lang=="ru" else "Natija yo‘q",
-                               reply_markup=home_kb(lang, is_admin(m.from_user.id)))
+                              reply_markup=home_kb(lang, is_admin(m.from_user.id)))
     skey = row[0]; scores = json.loads(row[1]); validity = json.loads(row[2])
     top = sorted(scores.items(), key=lambda x:x[1], reverse=True)[:3]
     short_txt = build_short_summary(lang, SURVEYS[skey], scores, top)
@@ -405,7 +405,7 @@ async def my_results(m:Message):
     await m.answer(short_txt, reply_markup=kb)
     LAST_RESULT[m.from_user.id] = {"lang":lang,"skey":skey,"scores":scores,"top":top,"validity":validity}
 
-# Admin quick actions
+# admin quick menu
 @dp.message(F.text=="🛠 Админ")
 async def admin_menu(m:Message):
     if not is_admin(m.from_user.id): return
@@ -417,25 +417,26 @@ async def admin_menu(m:Message):
     ], resize_keyboard=True)
     await m.answer("Админ-меню" if lang=="ru" else "Admin menyu", reply_markup=kb)
 
-# Home button handler (from reply keyboards)
+# Home button handlers
 @dp.message(F.text.in_(["🏠 В меню","🏠 Menyuga"]))
 async def to_home(m:Message):
     lang = get_lang(m.from_user.id)
     await m.answer("Меню" if lang=="ru" else "Menyu", reply_markup=home_kb(lang, is_admin(m.from_user.id)))
 
-# Inline HOME
 @dp.callback_query(F.data=="home")
 async def to_home_cb(c:CallbackQuery):
     lang = get_lang(c.from_user.id)
     await c.message.answer("Меню" if lang=="ru" else "Menyu", reply_markup=home_kb(lang, is_admin(c.from_user.id)))
     await c.answer()
 
-# admin: reload + export + stats
+# reload/export/stats
 @dp.message(Command("reload"))
 async def reload_cmd(m:Message):
     if not is_admin(m.from_user.id): return
     load_surveys(SURVEY_DIR); load_config()
+    lang = get_lang(m.from_user.id)
     await m.answer("Surveys reloaded.")
+    await m.answer("Меню" if lang=="ru" else "Menyu", reply_markup=home_kb(lang, is_admin(m.from_user.id)))
 
 @dp.message(Command("export"))
 async def export_cmd(m:Message):
@@ -451,8 +452,7 @@ async def stats(m:Message):
     if not is_admin(m.from_user.id): return
     async with aiosqlite.connect(DB_PATH) as db:
         cur = await db.execute("SELECT survey_key,COUNT(*) FROM results GROUP BY survey_key"); rows = await cur.fetchall()
-    await m.answer("
-".join([f"{SURVEYS.get(k,{}).get('title',{}).get('ru',k)}: {c}" for k,c in rows]) or "Нет данных")
+    await m.answer("\n".join([f"{SURVEYS.get(k,{}).get('title',{}).get('ru',k)}: {c}" for k,c in rows]) or "Нет данных")
 
 async def main():
     await ensure_db(); await dp.start_polling(bot)
